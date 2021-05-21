@@ -17,6 +17,55 @@
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
+<style>
+  .container-template {
+		/* background-color: #1a1a1a; */
+		margin: auto;
+		width: 350px;
+		height: 561px;
+		position: relative;
+		perspective: 500px;
+	}
+
+	#card{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		transform-style: preserve-3d;
+		transform-origin: center;
+		transition: transform 1s;
+	}
+
+	#card figure {
+		margin: 0;
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		color: white;
+		text-align: center;
+		font-weight: bold;
+		font-size: 50px;
+		backface-visibility: hidden;
+	}
+
+	#card .front {
+		/* background-color: #333; */
+	}
+
+	#card .back {
+		/* background-color: #000; */
+		transform: rotateY(180deg);
+	}
+
+	#card:hover {
+		transform: rotateY(180deg);
+	}
+/* 
+	img {
+		width: 100%;
+	} */
+</style>
 
 <body>
   <div class="wrap">
@@ -55,27 +104,35 @@
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="#loginModal" class="nav-link">Login</a></li>
+          <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
           <li class="nav-item"><a href="dtag.html" class="nav-link">DTag</a></li>
           <li class="nav-item"><a href="ctag.html" class="nav-link">CTag</a></li>
           <li class="nav-item"><a href="ttag.html" class="nav-link">TTag</a></li>
           <li class="nav-item"><a href="product.html" class="nav-link">Product</a></li>
           <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Admin</a></li>
+          <li class="nav-item"><a href="admin_login.html" class="nav-link">Admin</a></li>
+          
         </ul>
       </div>
     </div>
   </nav>
   <!-- END nav -->
-
-
-  <div class="hero-wrap js-fullheight" style="background-image: url('images/imageCover.png');"
+  <div class="hero-wrap js-fullheight" style="background-image: url('./images/imageCoverPage.png');"
     data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
       <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center"
         data-scrollax-parent="true">
         <div class="col-md-11 ftco-animate text-center">
+          <div>
+            <a href="member/dtag_register.html">DTagRegister</a>/
+            <a href="member/ctag_register.html">CTagRegister</a>/
+            <a href="member/ttag_register.html">TTagRegister</a>/
+            <a href="member/profile.html">Profile</a>/
+            <a href="member/member_login.html">MemberLogin</a>/
+            <a href="member/index.php">MemberDashboard</a>/
+            <a href="admin/index.php">AdminDashboard</a>
+          </div>
           <h1 class="mb-4">ใส่ใจชีวิต เพื่อความสุขที่มากขึ้น ด้วย</h1>
           <h1 class="mb-4">"HobbyQR" </h1>
           <p><a href="product.html" class="btn btn-primary mr-md-4 py-3 px-4">Product <span
@@ -148,53 +205,158 @@
         <div class="col-md-12">
           <div class="carousel-testimony owl-carousel ftco-owl">
             <div class="item">
+              <section class="container-template">
+                <div id="card">
+                  <figure class="front">
+                    <img src="images/template/Template Card-01.png" alt="">
+                    <!-- <div>
+                      <h3>Asmat</h3>
+                      <p>062-335-5987</p>
+                      <p>Myname Mat</p>
+                      <p>@mymat</p>
+                    </div> -->
+                  </figure>
+                  <figure class="back">
+                    <img src="images/template/Template Card-04.png" alt="">
+                    <!-- <div>
+                      <h3>Asmat</h3>
+                      <p>062-335-5987</p>
+                      <p>Myname Mat</p>
+                      <p>@mymat</p>
+                    </div> -->
+                  </figure>
+                </div>
+              </section>
+            </div>
+            <div class="item">
+              <section class="container-template">
+                <div id="card">
+                  <figure class="front">
+                    <img src="images/template/Template Card-02.png" alt="">
+                    <!-- <div>
+                      <h3>Asmat</h3>
+                      <p>062-335-5987</p>
+                      <p>Myname Mat</p>
+                      <p>@mymat</p>
+                    </div> -->
+                  </figure>
+                  <figure class="back">
+                    <img src="images/template/Template Card-05.png" alt="">
+                    <!-- <div>
+                      <h3>Asmat</h3>
+                      <p>062-335-5987</p>
+                      <p>Myname Mat</p>
+                      <p>@mymat</p>
+                    </div> -->
+                  </figure>
+                </div>
+              </section>
+            </div>
+            <div class="item">
+              <section class="container-template">
+                <div id="card">
+                  <figure class="front">
+                    <img src="images/template/Template Card-03.png" alt="">
+                    <!-- <div>
+                      <h3>Asmat</h3>
+                      <p>062-335-5987</p>
+                      <p>Myname Mat</p>
+                      <p>@mymat</p>
+                    </div> -->
+                  </figure>
+                  <figure class="back">
+                    <img src="images/template/Template Card-06.png" alt="">
+                    <!-- <div>
+                      <h3>Asmat</h3>
+                      <p>062-335-5987</p>
+                      <p>Myname Mat</p>
+                      <p>@mymat</p>
+                    </div> -->
+                  </figure>
+                </div>
+              </section>
+            </div>
+            <div class="item">
+              <section class="container-template">
+                <div id="card">
+                  <figure class="front">
+                    <img src="images/template/Template Card-01.png" alt="">
+                    <!-- <div>
+                      <h3>Asmat</h3>
+                      <p>062-335-5987</p>
+                      <p>Myname Mat</p>
+                      <p>@mymat</p>
+                    </div> -->
+                  </figure>
+                  <figure class="back">
+                    <img src="images/template/Template Card-04.png" alt="">
+                    <!-- <div>
+                      <h3>Asmat</h3>
+                      <p>062-335-5987</p>
+                      <p>Myname Mat</p>
+                      <p>@mymat</p>
+                    </div> -->
+                  </figure>
+                </div>
+              </section>
+            </div>
+            <div class="item">
+              <section class="container-template">
+                <div id="card">
+                  <figure class="front">
+                    <img src="images/template/Template Card-02.png" alt="">
+                    <!-- <div>
+                      <h3>Asmat</h3>
+                      <p>062-335-5987</p>
+                      <p>Myname Mat</p>
+                      <p>@mymat</p>
+                    </div> -->
+                  </figure>
+                  <figure class="back">
+                    <img src="images/template/Template Card-05.png" alt="">
+                    <!-- <div>
+                      <h3>Asmat</h3>
+                      <p>062-335-5987</p>
+                      <p>Myname Mat</p>
+                      <p>@mymat</p>
+                    </div> -->
+                  </figure>
+                </div>
+              </section>
+            </div>
+            <div class="item">
+              <section class="container-template">
+                <div id="card">
+                  <figure class="front">
+                    <img src="images/template/Template Card-03.png" alt="">
+                    <!-- <div>
+                      <h3>Asmat</h3>
+                      <p>062-335-5987</p>
+                      <p>Myname Mat</p>
+                      <p>@mymat</p>
+                    </div> -->
+                  </figure>
+                  <figure class="back">
+                    <img src="images/template/Template Card-06.png" alt="">
+                    <!-- <div>
+                      <h3>Asmat</h3>
+                      <p>062-335-5987</p>
+                      <p>Myname Mat</p>
+                      <p>@mymat</p>
+                    </div> -->
+                  </figure>
+                </div>
+              </section>
+            </div>
+           
+            <!-- <div class="item">
               <div class="testimony-wrap py-4">
                 <div class="text">
                   <img src="images/template/Template Card-01.png" alt="">
                   <img src="images/template/Template Card-04.png" alt="">
                 </div>
               </div>
-            </div>
-            <div class="item">
-              <div class="testimony-wrap py-4">
-                <div class="text">
-                  <img src="images/template/Template Card-02.png" alt="">
-                  <img src="images/template/Template Card-05.png" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="testimony-wrap py-4">
-                <div class="text">
-                  <img src="images/template/Template Card-03.png" alt="">
-                  <img src="images/template/Template Card-06.png" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="testimony-wrap py-4">
-                <div class="text">
-                  <img src="images/template/Template Card-03.png" alt="">
-                  <img src="images/template/Template Card-06.png" alt="">
-                </div>
-              </div>
-            </div>  
-            <div class="item">
-              <div class="testimony-wrap py-4">
-                <div class="text">
-                  <img src="images/template/Template Card-02.png" alt="">
-                  <img src="images/template/Template Card-05.png" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="testimony-wrap py-4">
-                <div class="text">
-                  <img src="images/template/Template Card-01.png" alt="">
-                  <img src="images/template/Template Card-04.png" alt="">
-                </div>
-              </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
