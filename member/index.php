@@ -4,8 +4,8 @@
 
 <br><br>
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
+<!-- <div class="content-wrapper">
+    Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
@@ -14,7 +14,7 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#" style="color:green">หน้าแรก</a></li>
+                        <li class="breadcrumb-item"><a href="#" style="color:black">หน้าแรก</a></li>
                         <li class="breadcrumb-item active">ข้อมูลส่วนตัว</li>
                     </ol>
                 </div><!-- /.col -->
@@ -29,9 +29,9 @@
         <!-- Widget: user widget style 1 -->
         <div class="card card-widget widget-user">
             <!-- Add the bg color to the header using any of the bg-* classes -->
-            <div class="widget-user-header bg-success">
-                <h3 class="widget-user-username">Mat Asmat</h3>
-                <h5 class="widget-user-desc">test</h5>
+            <div class="widget-user-header bg-black">
+                <h3 class="widget-user-username">Darf</h3>
+                <h5 class="widget-user-desc">Miler</h5>
             </div>
             <div class="widget-user-image">
                 <img class="img-circle elevation-2" src="../images/image_1.jpg" alt="User Avatar" width="300px">
@@ -104,7 +104,7 @@
         <!-- /.widget-user -->
     </section>
     <!-- /.content -->
-</div>
+<!-- </div> -->
 <!-- /.content-wrapper -->
 <script>
 $(document).ready(function() {

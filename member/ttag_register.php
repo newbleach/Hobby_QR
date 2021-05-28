@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Member Register DTag Page</title>
+    <title>Member Register TTag Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap"
@@ -73,28 +73,28 @@
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
-            <a class="navbar-brand" href="../index.html"><span class="fa fa-qrcode mr-2"></span>HobbyQR</a>
+            <a class="navbar-brand" href="../index.php"><span class="fa fa-qrcode mr-2"></span>HobbyQR</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="fa fa-bars"></span> Menu
             </button>
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="../login.html" class="nav-link">Login</a></li>
-                    <li class="nav-item"><a href="../dtag.html" class="nav-link">DTag</a></li>
-                    <li class="nav-item"><a href="../ctag.html" class="nav-link">CTag</a></li>
-                    <li class="nav-item"><a href="../ttag.html" class="nav-link">TTag</a></li>
-                    <li class="nav-item"><a href="../product.html" class="nav-link">Product</a></li>
-                    <li class="nav-item"><a href="../about.html" class="nav-link">About Us</a></li>
-                    <li class="nav-item"><a href="../admin_login.html" class="nav-link">Admin</a></li>
+                    <li class="nav-item"><a href="../index.php" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="../login.php" class="nav-link">Login</a></li>
+                    <li class="nav-item"><a href="../dtag.php" class="nav-link">DTag</a></li>
+                    <li class="nav-item"><a href="../ctag.php" class="nav-link">CTag</a></li>
+                    <li class="nav-item"><a href="../ttag.php" class="nav-link">TTag</a></li>
+                    <li class="nav-item"><a href="../product.php" class="nav-link">Product</a></li>
+                    <li class="nav-item"><a href="../about.php" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="../admin_login.php" class="nav-link">Admin</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- END nav -->
     <section class="ftco-appointment ftco-section ftco-no-pt ftco-no-pb img"
-        style="background-image: url(../images/dog/dog1.jpg);">
+        style="background-image: url(../images/plant2.jpg);">
         <div class="overlay"></div>
         <div class="container">
             <div class="row d-md-flex justify-content-end">
@@ -106,10 +106,10 @@
                           <a class="nav-link active_tab1" style="border:1px solid #ccc" id="list_login_details">ข้อมูลเจ้าของ</a>
                          </li>
                          <li class="nav-item">
-                          <a class="nav-link inactive_tab1" id="list_personal_details" style="border:1px solid #ccc">ข้อมูลสุนัข</a>
+                          <a class="nav-link inactive_tab1" id="list_personal_details" style="border:1px solid #ccc">ข้อมูลต้นไม้</a>
                          </li>
                          <li class="nav-item">
-                          <a class="nav-link inactive_tab1" id="list_contact_details" style="border:1px solid #ccc">นามบัตร</a>
+                          <a class="nav-link inactive_tab1" id="list_contact_details" style="border:1px solid #ccc">เลือกนามบัตร</a>
                          </li>
                         </ul>
                         <div class="tab-content" style="margin-top:16px;">
@@ -118,18 +118,48 @@
                            <div class="panel-heading">ข้อมูลเจ้าของ</div>
                            <div class="panel-body">
                             <div class="form-group">
-                             <label>Enter Email Address</label>
-                             <input type="text" name="email" id="email" class="form-control" />
-                             <span id="error_email" class="text-danger"></span>
+                             <label>Qrcode No.</label>
+                             <input type="text" name="qrcode" id="qrcode" class="form-control" value="qrcode number" disabled/>
+                             <span id="error_qrcode" class="text-danger"></span>
                             </div>
+                            <!-- <div class="form-group">
+                                <label>Enter Email Address</label>
+                                <input type="text" name="email" id="email" class="form-control" />
+                                <span id="error_email" class="text-danger"></span>
+                               </div> -->
+                               <div class="form-group">
+                                <label>Username(ชื่อผู้ใช้)</label>
+                                <input type="text" name="email" id="username" class="form-control" />
+                                <span id="error_username" class="text-danger"></span>
+                               </div>
                             <div class="form-group">
-                             <label>Enter Password</label>
+                             <label>Password(รหัสผ่าน)</label>
                              <input type="password" name="password" id="password" class="form-control" />
                              <span id="error_password" class="text-danger"></span>
                             </div>
+                            <div class="form-group">
+                                <label>Firstname(ชื่อจริง)</label>
+                                <input type="text" name="firstname" id="firstname" class="form-control" />
+                                <span id="text" class="text-danger"></span>
+                               </div>
+                               <div class="form-group">
+                                <label>Lastname(นามสกุลจริง)</label>
+                                <input type="text" name="lastname" id="lastname" class="form-control" />
+                                <span id="error_password" class="text-danger"></span>
+                               </div>
+                               <div class="form-group">
+                                <label>Telephone(เบอร์โทรศัพท์)</label>
+                                <input type="text" name="telephone" id="telephone" class="form-control" />
+                                <span id="error_password" class="text-danger"></span>
+                               </div>
+                               <div class="form-group">
+                                <label>Line(ไลน์)</label>
+                                <input type="text" name="telephone" id="telephone" class="form-control" />
+                                <span id="error_password" class="text-danger"></span>
+                               </div>
                             <br />
                             <div align="center">
-                             <button type="button" name="btn_login_details" id="btn_login_details" class="btn btn-info btn-lg">Next</button>
+                             <button type="button" name="btn_login_details" id="btn_login_details" class="btn btn-success btn-lg">Next</button>
                             </div>
                             <br />
                            </div>
@@ -137,7 +167,7 @@
                          </div>
                          <div class="tab-pane fade" id="personal_details">
                           <div class="panel panel-default">
-                           <div class="panel-heading">ข้อมูลสุนัข</div>
+                           <div class="panel-heading">Fill Personal Details</div>
                            <div class="panel-body">
                             <div class="form-group">
                              <label>Enter First Name</label>
@@ -161,7 +191,7 @@
                             <br />
                             <div align="center">
                              <button type="button" name="previous_btn_personal_details" id="previous_btn_personal_details" class="btn btn-default btn-lg">Previous</button>
-                             <button type="button" name="btn_personal_details" id="btn_personal_details" class="btn btn-info btn-lg">Next</button>
+                             <button type="button" name="btn_personal_details" id="btn_personal_details" class="btn btn-success btn-lg">Next</button>
                             </div>
                             <br />
                            </div>
@@ -169,7 +199,7 @@
                          </div>
                          <div class="tab-pane fade" id="contact_details">
                           <div class="panel panel-default">
-                           <div class="panel-heading">นามบัตร</div>
+                           <div class="panel-heading">Fill Contact Details</div>
                            <div class="panel-body">
                             <div class="form-group">
                              <label>Enter Address</label>
@@ -192,7 +222,7 @@
                          </div>
                         </div>
                        </form>
-                    <form action="#" class="appointment">
+                    <!-- <form action="#" class="appointment">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -254,7 +284,7 @@
                                 </div>
                             </div>
                         </div>
-                    </form>
+                    </form> -->
                 </div>
             </div>
         </div>

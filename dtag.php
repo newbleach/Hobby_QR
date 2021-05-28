@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+    <head>
 		<title>HobbyQR - ใส่ใจชีวิต เพื่อความสุขที่มากขึ้น ด้วย HobbyQR</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -40,32 +40,32 @@
 			</div>
 		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 			<div class="container">
-				<a class="navbar-brand" href="index.html"><span class="fa fa-qrcode mr-2"></span>HobbyQR</a>
+				<a class="navbar-brand" href="index.php"><span class="fa fa-qrcode mr-2"></span>HobbyQR</a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="fa fa-bars"></span> Menu
 			  </button>
 			  <div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-					<li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
-					<li class="nav-item"><a href="dtag.html" class="nav-link">DTag</a></li>
-					<li class="nav-item"><a href="ctag.html" class="nav-link">CTag</a></li>
-				  <li class="nav-item active"><a href="ttag.html" class="nav-link">TTag</a></li>
-				  <li class="nav-item"><a href="product.html" class="nav-link">Product</a></li>
-				  <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-				  <li class="nav-item"><a href="admin_login.html" class="nav-link">Admin</a></li>
+					<li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>
+					<li class="nav-item active"><a href="dtag.php" class="nav-link">DTag</a></li>
+					<li class="nav-item"><a href="ctag.php" class="nav-link">CTag</a></li>
+				  <li class="nav-item"><a href="ttag.php" class="nav-link">TTag</a></li>
+				  <li class="nav-item"><a href="product.php" class="nav-link">Product</a></li>
+				  <li class="nav-item"><a href="about.php" class="nav-link">About Us</a></li>
+				  <li class="nav-item"><a href="admin_login.php" class="nav-link">Admin</a></li>
 				</ul>
 			  </div>
 			</div>
 		  </nav>
     <!-- END nav -->
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/feedback/plants.jpg');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/dog/dogs.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end">
           <div class="col-md-9 ftco-animate pb-5">
-          	<p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Ttag <i class="ion-ios-arrow-forward"></i></span></p>
-            <h1 class="mb-0 bread">TTAG</h1>
+          	<p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Dtag <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-0 bread">DTAG</h1>
           </div>
         </div>
       </div>
@@ -74,31 +74,52 @@
     	<div class="container">
     		<div class="row">
     			<div class="col-lg-6 order-md-last">
-    				<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0" style="background-image:url(images/feedback/plant1.jpg);">
+    				<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0" style="background-image:url(images/feedback/dog2.jpg);">
     					
     				</div>
     				<div class="d-flex mt-3">
-    					<div class="img img-2 mr-md-2" style="background-image:url(images/feedback/plant2.jpg);"></div>
-    					<div class="img img-2 ml-md-2" style="background-image:url(images/feedback/plant3.jpg);"></div>
+    					<div class="img img-2 mr-md-2" style="background-image:url(images/feedback/dog1.jpg);"></div>
+    					<div class="img img-2 ml-md-2" style="background-image:url(images/feedback/dog3.jpg);"></div>
     				</div>
     			</div>
 
     			<div class="col-lg-6">
     				<div class="heading-section mb-5 mt-5 mt-lg-0">
-	            <h2 class="mb-3">วิธีการใช้</h2>
-	            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+	            <h2 class="mb-3">อธิบายวิธีการใช้งาน</h2>
+	            <!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p> -->
     				</div>
     				<div id="accordion" class="myaccordion w-100" aria-multiselectable="true">
 						  <div class="card">
 						    <div class="card-header p-0" id="headingOne">
 						      <h2 class="mb-0">
 						        <button href="#collapseOne" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
-						        	<p class="mb-0">How to train your pet dog?</p>
+						        	<p class="mb-0">วิธีการใช้ DTag</p>
 						          <i class="fa" aria-hidden="true"></i>
 						        </button>
 						      </h2>
 						    </div>
 						    <div class="collapse show" id="collapseOne" role="tabpanel" aria-labelledby="headingOne">
+						      <div class="card-body py-3 px-0">
+						      	<ol>
+						      		<li>SCAN QR CODE ที่ผลิตภัณฑ์ของท่านเพื่อลงทะเบียน</li>
+						      		<li>ลงทะเบียนสมัครสมาชิก (กรอกข้อมูลเจ้าของ) และเลือกชนิดพันธุ์ของสุนัข</li>
+						      		<li>กรอกข้อมูลน้องหมาของเรา</li>
+						      		<li>เลือกเทมเพลตนามบัตร</li>
+						      	</ol>
+						      </div>
+						    </div>
+						  </div>
+
+						  <div class="card">
+						    <div class="card-header p-0" id="headingTwo" role="tab">
+						      <h2 class="mb-0">
+						        <button href="#collapseTwo" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+						        	<p class="mb-0">ถ้าลืม Username/Password</p>
+						          <i class="fa" aria-hidden="true"></i>
+						        </button>
+						      </h2>
+						    </div>
+						    <div class="collapse" id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo">
 						      <div class="card-body py-3 px-0">
 						      	<ol>
 						      		<li>Far far away, behind the word mountains</li>
@@ -110,17 +131,58 @@
 						      </div>
 						    </div>
 						  </div>
-
 						  <div class="card">
 						    <div class="card-header p-0" id="headingTwo" role="tab">
 						      <h2 class="mb-0">
-						        <button href="#collapseTwo" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
-						        	<p class="mb-0">How to manage your pets?</p>
+						        <button href="#collapseThree" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+						        	<p class="mb-0">ถ้าป้ายหายแต่ไม่ลืม Username/Password</p>
 						          <i class="fa" aria-hidden="true"></i>
 						        </button>
 						      </h2>
 						    </div>
-						    <div class="collapse" id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo">
+						    <div class="collapse" id="collapseThree" role="tabpanel" aria-labelledby="headingTwo">
+						      <div class="card-body py-3 px-0">
+						      	<ol>
+						      		<li>Far far away, behind the word mountains</li>
+						      		<li>Consonantia, there live the blind texts</li>
+						      		<li>When she reached the first hills of the Italic Mountains</li>
+						      		<li>Bookmarksgrove, the headline of Alphabet Village</li>
+						      		<li>Separated they live in Bookmarksgrove right</li>
+						      	</ol>
+						      </div>
+						    </div>
+						  </div>
+						  <div class="card">
+						    <div class="card-header p-0" id="headingTwo" role="tab">
+						      <h2 class="mb-0">
+						        <button href="#collapsefour" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+						        	<p class="mb-0">ถ้าทำป้ายหายและลืม Username/Password</p>
+						          <i class="fa" aria-hidden="true"></i>
+						        </button>
+						      </h2>
+						    </div>
+						    <div class="collapse" id="collapsefour" role="tabpanel" aria-labelledby="headingTwo">
+						      <div class="card-body py-3 px-0">
+						      	<ol>
+						      		<li>Far far away, behind the word mountains</li>
+						      		<li>Consonantia, there live the blind texts</li>
+						      		<li>When she reached the first hills of the Italic Mountains</li>
+						      		<li>Bookmarksgrove, the headline of Alphabet Village</li>
+						      		<li>Separated they live in Bookmarksgrove right</li>
+						      	</ol>
+						      </div>
+						    </div>
+						  </div>
+						  <div class="card">
+						    <div class="card-header p-0" id="headingTwo" role="tab">
+						      <h2 class="mb-0">
+						        <button href="#collapsefive" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+						        	<p class="mb-0">เราเป็นเจ้าของหมาหลายตัวต้องทำอย่างไร</p>
+						          <i class="fa" aria-hidden="true"></i>
+						        </button>
+						      </h2>
+						    </div>
+						    <div class="collapse" id="collapsefive" role="tabpanel" aria-labelledby="headingTwo">
 						      <div class="card-body py-3 px-0">
 						      	<ol>
 						      		<li>Far far away, behind the word mountains</li>
@@ -139,12 +201,12 @@
     </section>
 
 	
-	<section class="ftco-section testimony-section" style="background-image: url('images/feedback/plants.jpg');">
+	<section class="ftco-section testimony-section" style="background-image: url('images/dog/dogs.jpg');">
     	<div class="overlay"></div>
       <div class="container">
         <div class="row justify-content-center pb-5 mb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-            <h2><a href="product.html">สินค้าขายดี</a></h2>
+            <h2><a href="product.php">สินค้าขายดี</a></h2>
           </div>
         </div>
         <div class="row ftco-animate">
@@ -154,7 +216,7 @@
                 <div class="testimony-wrap py-4">
                 	<!-- <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div> -->
                   <div class="text">
-					  <img src="images/feedback/plant2.jpg">
+					  <img src="images/dog/dog1.jpg" alt="" width="300px">
                     <div class="d-flex align-items-center">
                     	<div class="pl-3">
 		                    <p class="name">Roger Scott</p>
@@ -168,7 +230,7 @@
                 <div class="testimony-wrap py-4">
                 	<!-- <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div> -->
                   <div class="text">
-					  <img src="images/feedback/plant1.jpg" alt="">
+					  <img src="images/dog/dog1.jpg" alt="" width="300px">
                     <div class="d-flex align-items-center">
                     	<div class="pl-3">
 		                    <p class="name">Roger Scott</p>
@@ -182,7 +244,7 @@
                 <div class="testimony-wrap py-4">
                 	<!-- <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div> -->
                   <div class="text">
-					  <img src="images/feedback/plant3.jpg" alt="">
+					  <img src="images/dog/dog1.jpg" alt="" width="300px">
                     <div class="d-flex align-items-center">
                     	<div class="pl-3">
 		                    <p class="name">Roger Scott</p>
@@ -196,7 +258,7 @@
                 <div class="testimony-wrap py-4">
                 	<!-- <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div> -->
                   <div class="text">
-					  <img src="images/feedback/plant3.jpg" alt="">
+					  <img src="images/dog/dog1.jpg" alt="" width="300px">
                     <div class="d-flex align-items-center">
                     	<div class="pl-3">
 		                    <p class="name">Roger Scott</p>
@@ -210,7 +272,7 @@
                 <div class="testimony-wrap py-4">
                 	<!-- <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div> -->
                   <div class="text">
-					  <img src="images/feedback/plant3.jpg" alt="">
+					  <img src="images/dog/dog1.jpg" alt="" width="300px">
                     <div class="d-flex align-items-center">
                     	<div class="pl-3">
 		                    <p class="name">Roger Scott</p>

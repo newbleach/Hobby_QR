@@ -40,20 +40,20 @@
 			</div>
         <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
             <div class="container">
-                <a class="navbar-brand" href="index.html"><span class="fa fa-qrcode mr-2"></span>HobbyQR</a>
+                <a class="navbar-brand" href="index.php"><span class="fa fa-qrcode mr-2"></span>HobbyQR</a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="fa fa-bars"></span> Menu
               </button>
               <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
-                    <li class="nav-item"><a href="dtag.html" class="nav-link">DTag</a></li>
-                    <li class="nav-item active"><a href="ctag.html" class="nav-link">CTag</a></li>
-                  <li class="nav-item"><a href="ttag.html" class="nav-link">TTag</a></li>
-                  <li class="nav-item"><a href="product.html" class="nav-link">Product</a></li>
-                  <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-                  <li class="nav-item"><a href="admin_login.html" class="nav-link">Admin</a></li>
+                    <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>
+                    <li class="nav-item"><a href="dtag.php" class="nav-link">DTag</a></li>
+                    <li class="nav-item active"><a href="ctag.php" class="nav-link">CTag</a></li>
+                  <li class="nav-item"><a href="ttag.php" class="nav-link">TTag</a></li>
+                  <li class="nav-item"><a href="product.php" class="nav-link">Product</a></li>
+                  <li class="nav-item"><a href="about.php" class="nav-link">About Us</a></li>
+                  <li class="nav-item"><a href="admin_login.php" class="nav-link">Admin</a></li>
                 </ul>
               </div>
             </div>
@@ -64,7 +64,7 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-end">
           <div class="col-md-9 ftco-animate pb-5">
-          	<p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Ctag <i class="ion-ios-arrow-forward"></i></span></p>
+          	<p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Ctag <i class="ion-ios-arrow-forward"></i></span></p>
             <h1 class="mb-0 bread">CTAG</h1>
           </div>
         </div>
@@ -144,7 +144,7 @@
       <div class="container">
         <div class="row justify-content-center pb-5 mb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-            <h2><a href="product.html">สินค้าขายดี</a></h2>
+            <h2><a href="product.php">สินค้าขายดี</a></h2>
           </div>
         </div>
         <div class="row ftco-animate">

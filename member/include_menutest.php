@@ -1,24 +1,3 @@
-<?php 
-session_start();
-
-include('../condb.php');
-
-$AdminID = $_SESSION['AdminID'];
-$AdminLevel = $_SESSION['AdminLevel'];
-
-if($AdminLevel!='admin'){
-	Header("Location: ../logout.php");
-}
-
-
-$sql = "
-SELECT * FROM tbl_admin
-WHERE AdminID=$AdminID";
-$result = mysqli_query($condb, $sql) or die ("Error in query: $sql " . mysqli_error());
-$row = mysqli_fetch_array($result);
-extract($row);
-
- ?>
 <!DOCTYPE html>
 <html>
 
@@ -142,7 +121,8 @@ li {
 }
 </style> -->
 
-<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<!-- <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed"> -->
+<body class="hold-transition layout-top-nav  layout-navbar-fixed layout-footer-fixed">
 
     <div class="wrapper">
         <!-- ============================================= -->
@@ -178,19 +158,19 @@ li {
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-success elevation-4">
             <!-- Brand Logo -->
-            <a href="../index.php" class="brand-link">
+            <a href="../index.html" class="brand-link">
                 <img src="../images/qrcode.png" alt="" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">HobbyQR (Admin)</span>
+                <span class="brand-text font-weight-light">HobbyQR (Member)</span>
             </a>
             <!-- Sidebar -->
             <div class="sidebar">
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <!-- <img src="../images/person_4.jpg" class="img-circle elevation-2" alt="User Image"> -->
+                        <img src="../images/image_1.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block"> <?php echo $AdminFirstName.'  '.$AdminLastName;?></a>
+                        <a href="#" class="d-block"> Asmat Saleah</a>
                     </div>
                 </div>
 
@@ -200,127 +180,69 @@ li {
 
                         <li class="nav-item">
                             <a href="./index.php" class="nav-link">
-                                <i class=" nav-icon fas fa-chart-pie"></i>
+                                <i class="nav-icon fas fa-id-card"></i>
 
                                 <p>
-                                    รายงานสรุป
+                                    ข้อมูลส่วนตัว
                                 </p>
                             </a>
                         </li>
-
-
-                        <li class="nav-header">ตรวจสอบข้อมูล</li>
-                        <li class="nav-item">
-                            <a href="./table_member.php" class="nav-link">
-                                <i class="nav-icon fas fa-user-check"></i>
-
-                                <p>
-                                    ข้อมูลสมาชิก
-                                </p>
-                            </a>
-                        </li>
-
 
                         <li class="nav-header">จัดการข้อมูล</li>
-                        <li class="nav-item">
-                            <a href="./table_qrcode.php" class="nav-link">
-                                <i class="nav-icon fas fa-qrcode"></i>
-                                <p>
-                                    QR Code Generator
-                                </p>
-                            </a>
-                        </li>
                         <li class="nav-item has-treeview menu-open">
                             <a href="#" class="nav-link active">
-                                <i class="nav-icon fas fa-tag"></i>
+                                <i class="nav-icon fas fa-paw"></i>
                                 <p>
-                                    Product
+                                บันทึกสุขภาพสัตว์เลี้ยง
                                     <i class="fas fa-angle-left right"></i>
                                     <!-- <span class="badge badge-success right">2</span> -->
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="./table_pro_dtag.php" class="nav-link">
+                                    <a href="./table_body_weight.php" class="nav-link">
                                         <i class="far fa-circle nav-icon text-success"></i>
-                                        <p>DTag</p>
+                                        <p>น้ำหนัก</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./table_pro_ctag.php" class="nav-link">
+                                    <a href="./table_vaccine.php" class="nav-link">
                                         <i class="nav-icon far fa-circle text-success"></i>
-                                        <p>CTag</p>
+                                        <p>ประวัติการฉีดวัคซีน</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./table_pro_ttag.php" class="nav-link">
+                                    <a href="./table_flea_treatments.php" class="nav-link">
                                         <i class="nav-icon far fa-circle text-success"></i>
-                                        <p>TTag</p>
+                                        <p>ประวัติการจัดเห็ดหมัด</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./table_worming.php" class="nav-link">
+                                        <i class="nav-icon far fa-circle text-success"></i>
+                                        <p>ป้องกันพยาธิหนอนหัวใจ</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./table_medicine.php" class="nav-link">
+                                        <i class="nav-icon far fa-circle text-success"></i>
+                                        <p>รายละเอียดยา</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./table_visit.php" class="nav-link">
+                                        <i class="nav-icon far fa-circle text-success"></i>
+                                        <p>พบคุณหมอ</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./table_health_note.php" class="nav-link">
+                                        <i class="nav-icon far fa-circle text-success"></i>
+                                        <p>ข้อมูลสุขภาพทั่วไป</p>
                                     </a>
                                 </li>
                             </ul>
                            
-                        <li class="nav-item has-treeview menu-open">
-                            <a href="#" class="nav-link active">
-                                <i class="nav-icon far fa-address-card"></i>
-                                <p>
-                                    Template
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="./table_tem_dtag.php" class="nav-link">
-                                        <i class="far fa-circle nav-icon text-success"></i>
-                                        <p>DTag</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="./table_tem_ctag.php" class="nav-link">
-                                        <i class="nav-icon far fa-circle text-success"></i>
-                                        <p>CTag</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="./table_tem_ttag.php" class="nav-link">
-                                        <i class="nav-icon far fa-circle text-success"></i>
-                                        <p>TTag</p>
-                                    </a>
-                                </li>
-                            </ul>
-                            <li class="nav-item has-treeview menu-open">
-                                <a href="#" class="nav-link active">
-                                    <p>
-                                        <i class="nav-icon fas fa-paw"></i>
-                                        Breed 
-                                    <i class="nav-icon fas fa-seedling"></i>
-                                    Seedling
-                                        <i class="fas fa-angle-left right"></i>
-                                        <!-- <span class="badge badge-success right">2</span> -->
-                                    </p>
-                                </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="./table_type_dtag.php" class="nav-link">
-                                            <i class="far fa-circle nav-icon text-success"></i>
-                                            <p>DTag</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="./table_type_ctag.php" class="nav-link">
-                                            <i class="nav-icon far fa-circle text-success"></i>
-                                            <p>CTag</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="./table_type_ttag.php" class="nav-link">
-                                            <i class="nav-icon far fa-circle text-success"></i>
-                                            <p>TTag</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            
-                      
                         <li class="nav-header">อื่นๆ</li>
                         <li class="nav-item">
                             <a href="../index.php" class="nav-link">

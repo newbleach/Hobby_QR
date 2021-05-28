@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>HobbyQR</title>
-    <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>HobbyQR/สมาชิก</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <script src="js/test.js"></script>
     <!-- ============================================= -->
     <!-- (1) link-->
@@ -32,272 +43,101 @@
     <link rel="stylesheet" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="../https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- Tempusdominus Bbootstrap 4 -->
-    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-    <!-- iCheck -->
-    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-    <!-- JQVMap -->
-    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/adminlte.min.css">
-    <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-    <!-- Daterange picker -->
-    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
-    <!-- summernote -->
-    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
-    <!-- Google Font: Source Sans Pro -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-    <!-- IonIcons -->
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/adminlte.min.css">
-    <!-- Google Font: Source Sans Pro -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-    <style type="text/css">
-        /* Chart.js */
-        @keyframes chartjs-render-animation {
-            from {
-                opacity: .99
-            }
-
-            to {
-                opacity: 1
-            }
-        }
-
-        .chartjs-render-monitor {
-            animation: chartjs-render-animation 1ms
-        }
-
-        .chartjs-size-monitor,
-        .chartjs-size-monitor-expand,
-        .chartjs-size-monitor-shrink {
-            position: absolute;
-            direction: ltr;
-            left: 0;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            overflow: hidden;
-            pointer-events: none;
-            visibility: hidden;
-            z-index: -1
-        }
-
-        .chartjs-size-monitor-expand>div {
-            position: absolute;
-            width: 1000000px;
-            height: 1000000px;
-            left: 0;
-            top: 0
-        }
-
-        .chartjs-size-monitor-shrink>div {
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            left: 0;
-            top: 0
-        }
-    </style>
-
+    <!-- ============================================= -->
 </head>
-<!-- ============================================= -->
-<!-- </head>
-<style>
-li {
-  font-family: "JasmineUPC", Times, serif;
-  /* font-size: 15px; */
-  /* font-size: large; */
-  font-size: 120%;
-}
-</style> -->
 
-<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<!-- <body class="hold-transition layout-top-nav"> -->
+<body class="hold-transition layout-top-nav  layout-navbar-fixed layout-footer-fixed">
 
     <div class="wrapper">
-        <!-- ============================================= -->
-        <!-- (2) navbar-->
+
         <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-success navbar-light">
-            <!-- Left navbar links -->
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
-                </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="../index.html" class="nav-link">หน้าแรก</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
-                        <i class="fas fa-th-large"></i>
-                    </a>
-                </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="../index.html" class="nav-link">ออกจากระบบ</a>
-                </li>
-            </ul>
-        </nav>
-        <!-- /.navbar -->
-        <!-- ============================================= -->
+        <nav class="main-header navbar navbar-expand-md navbar-light navbar-dark">
+            <div class="container">
+                <a href="index3.html" class="navbar-brand">
+                    <img src="../images/qrcode.png" alt="AdminLTE Logo"
+                        class="brand-image img-circle elevation-3" style="opacity: .8">
+                    <span class="brand-text font-weight-light">HobbyQR</span>
+                </a>
 
-        <!-- ============================================= -->
-        <!-- (3) sidebar_menu -->
+                <button class="navbar-toggler order-1" type="button" data-toggle="collapse"
+                    data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-success elevation-4">
-            <!-- Brand Logo -->
-            <a href="../index.html" class="brand-link">
-                <img src="../images/qrcode.png" alt="" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">HobbyQR (Member)</span>
-            </a>
-            <!-- Sidebar -->
-            <div class="sidebar">
-                <!-- Sidebar user panel (optional) -->
-                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                    <div class="image">
-                        <img src="../images/image_1.jpg" class="img-circle elevation-2" alt="User Image">
-                    </div>
-                    <div class="info">
-                        <a href="#" class="d-block"> Asmat Saleah</a>
-                    </div>
-                </div>
-
-                <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
-                        data-accordion="false">
-
+                <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+                    <!-- Left navbar links -->
+                    <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="./index.php" class="nav-link">
-                                <i class="nav-icon fas fa-id-card"></i>
-
-                                <p>
-                                    ข้อมูลส่วนตัว
-                                </p>
-                            </a>
+                            <a href="./index.php" class="nav-link">หน้าแรก</a>
                         </li>
-
-                        <li class="nav-header">จัดการข้อมูล</li>
-                        <li class="nav-item has-treeview menu-open">
-                            <a href="#" class="nav-link active">
-                                <i class="nav-icon fas fa-paw"></i>
-                                <p>
-                                บันทึกสุขภาพสัตว์เลี้ยง
-                                    <i class="fas fa-angle-left right"></i>
-                                    <!-- <span class="badge badge-success right">2</span> -->
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="./table_body_weight.php" class="nav-link">
-                                        <i class="far fa-circle nav-icon text-success"></i>
-                                        <p>น้ำหนัก</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="./table_vaccine.php" class="nav-link">
-                                        <i class="nav-icon far fa-circle text-success"></i>
-                                        <p>ประวัติการฉีดวัคซีน</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="./table_flea_treatments.php" class="nav-link">
-                                        <i class="nav-icon far fa-circle text-success"></i>
-                                        <p>ประวัติการจัดเห็ดหมัด</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="./table_worming.php" class="nav-link">
-                                        <i class="nav-icon far fa-circle text-success"></i>
-                                        <p>ป้องกันพยาธิหนอนหัวใจ</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="./table_medicine.php" class="nav-link">
-                                        <i class="nav-icon far fa-circle text-success"></i>
-                                        <p>รายละเอียดยา</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="./table_visit.php" class="nav-link">
-                                        <i class="nav-icon far fa-circle text-success"></i>
-                                        <p>พบคุณหมอ</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="./table_health_note.php" class="nav-link">
-                                        <i class="nav-icon far fa-circle text-success"></i>
-                                        <p>ข้อมูลสุขภาพทั่วไป</p>
-                                    </a>
-                                </li>
+                        <li class="nav-item">
+                            <a href="./info_care.php" class="nav-link">วิธีการดูแล</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" class="nav-link dropdown-toggle">บันทึกสุขภาพสัตว์เลี้ยง</a>
+                            <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+                                <li><a href="./table_body_weight.php" class="dropdown-item">น้ำหนัก</a></li>
+                                <li><a href="./table_vaccine.php" class="dropdown-item">ประวัติการฉีดวัคซีน</a></li>
+                                <li><a href="./table_flea_treatments.php" class="dropdown-item">ประวัติการจัดเห็ดหมัด</a></li>
+                                <li><a href="./table_worming.php" class="dropdown-item">ป้องกันพยาธิหนอนหัวใจ</a></li>
+                                <li><a href="./table_medicine.php" class="dropdown-item">รายละเอียดยา</a></li>
+                                <li><a href="./table_visit.php" class="dropdown-item">พบคุณหมอ</a></li>
+                                <li><a href="./table_health_note.php" class="dropdown-item">ข้อมูลสุขภาพทั่วไป</a></li>
                             </ul>
-                           
-                        <li class="nav-header">อื่นๆ</li>
-                        <li class="nav-item">
-                            <a href="../index.html" class="nav-link">
-                                <i class="nav-icon fas fa-home"></i>
-                                <p>
-                                    หน้าแรก
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="../index.html" class="nav-link">
-                                <i class="nav-icon fas fa-sign-out-alt"></i>
-
-                                <p>
-                                    ออกจากระบบ
-                                </p>
-                            </a>
                         </li>
                     </ul>
-                </nav>
-                <!-- /.sidebar-menu -->
+                </div>
+
+                <!-- Right navbar links -->
+                <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+                    <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                            <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" class="nav-link dropdown-toggle">หน้าหลัก</a>
+                            <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+                                <li><a href="./index.php" class="dropdown-item">ข้อมูลส่วนตัว</a></li>
+                                <li><a href="update_profile.php" class="dropdown-item">แก้ไขข้อมูลส่วนตัว</a></li>
+                                <li><a href="change_password.php" class="dropdown-item">แก้ไขรหัสผ่าน</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item d-none d-sm-inline-block">
+                            <a href="../logout.php" class="nav-link">ออกจากระบบ</a>
+                        </li>
+                    </ul>
+                </ul>
             </div>
-            <!-- /.sidebar -->
-        </aside>
+        </nav>
+        <!-- /.navbar -->
 
-        <!-- ============================================= -->
+      
 
-        <!-- content -->
-
+        <!-- Main Footer -->
         <!-- ============================================= -->
         <!-- (4) footer-->
         <footer class="main-footer">
             <strong>ระบบ HobbyQR
-                <a href="https://alphageek.co.th/" style="color:green">บริษัท อัลฟ่ากีค จำกัด</a>.</strong>
+                <a href="https://alphageek.co.th/" style="color:black">บริษัท อัลฟ่ากีค จำกัด</a>.</strong>
             <div class="float-right d-none d-sm-inline-block">
                 <b>2021</b>
             </div>
         </footer>
 
         <!-- ============================================= -->
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-        </aside>
-        <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
-    <!-- ============================================= -->
-    <!-- (5) script-->
-    <!-- jQuery -->
-    <script src="../plugins/jquery/jquery.min.js"></script>
+
+    <!-- REQUIRED SCRIPTS -->
+
+     <!-- jQuery -->
+     <script src="../plugins/jquery/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
-        $.widget.bridge('uibutton', $.ui.button)
+    $.widget.bridge('uibutton', $.ui.button)
     </script>
     <!-- Bootstrap 4 -->
     <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -328,32 +168,19 @@ li {
     <!-- DataTables -->
     <script src="../plugins/datatables/jquery.dataTables.js"></script>
     <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
-
-    <!-- jQuery -->
-    <script src="plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- AdminLTE -->
-    <script src="dist/js/adminlte.js"></script>
-
-    <!-- OPTIONAL SCRIPTS -->
-    <script src="plugins/chart.js/Chart.min.js"></script>
-    <script src="dist/js/demo.js"></script>
-    <script src="dist/js/pages/dashboard3.js"></script>
     <script>
-        $(function () {
-            $("#example1").DataTable();
-            $('#example2').DataTable({
-                "paging": true,
-                "lengthChange": false,
-                "searching": false,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false,
-            });
-        });
-    </script>
+  $(function () {
+    $("#example1").DataTable();
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+    });
+  });
+</script>
 </body>
-<!-- ============================================= -->
 
 </html>

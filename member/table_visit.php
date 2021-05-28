@@ -4,7 +4,7 @@
 
 <br><br>
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
+<!-- <div class="content-wrapper"> -->
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
@@ -98,7 +98,7 @@
     </section>
     <!-- /.content -->
     <br><br>
-</div>
+<!-- </div> -->
 <!-- /.content-wrapper -->
 <!-- page script -->
 <script>

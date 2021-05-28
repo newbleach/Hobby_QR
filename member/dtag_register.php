@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Member Register CTag Page</title>
+    <title>Member Register DTag Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap"
@@ -73,43 +73,43 @@
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
-            <a class="navbar-brand" href="../index.html"><span class="fa fa-qrcode mr-2"></span>HobbyQR</a>
+            <a class="navbar-brand" href="../index.php"><span class="fa fa-qrcode mr-2"></span>HobbyQR</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="fa fa-bars"></span> Menu
             </button>
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="../login.html" class="nav-link">Login</a></li>
-                    <li class="nav-item"><a href="../dtag.html" class="nav-link">DTag</a></li>
-                    <li class="nav-item"><a href="../ctag.html" class="nav-link">CTag</a></li>
-                    <li class="nav-item"><a href="../ttag.html" class="nav-link">TTag</a></li>
-                    <li class="nav-item"><a href="../product.html" class="nav-link">Product</a></li>
-                    <li class="nav-item"><a href="../about.html" class="nav-link">About Us</a></li>
-                    <li class="nav-item"><a href="../admin_login.html" class="nav-link">Admin</a></li>
+                    <li class="nav-item"><a href="../index.php" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="../login.php" class="nav-link">Login</a></li>
+                    <li class="nav-item"><a href="../dtag.php" class="nav-link">DTag</a></li>
+                    <li class="nav-item"><a href="../ctag.php" class="nav-link">CTag</a></li>
+                    <li class="nav-item"><a href="../ttag.php" class="nav-link">TTag</a></li>
+                    <li class="nav-item"><a href="../product.php" class="nav-link">Product</a></li>
+                    <li class="nav-item"><a href="../about.php" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="../admin_login.php" class="nav-link">Admin</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- END nav -->
     <section class="ftco-appointment ftco-section ftco-no-pt ftco-no-pb img"
-        style="background-image: url(../images/cat/cat1.jpg);">
+        style="background-image: url(../images/dog/dog1.jpg);">
         <div class="overlay"></div>
         <div class="container">
             <div class="row d-md-flex justify-content-end">
                 <div class="col-md-12 col-lg-6 half p-3 py-5 pl-lg-5 ftco-animate">
-                    <h2 class="mb-4">กรอกข้อมูลสมัครสมาชิก</h2>
-                    <form method="post" id="register_form">
+                    <!-- <h2 class="mb-4">กรอกข้อมูลสมัครสมาชิก</h2> -->
+                    <!-- <form method="post" id="register_form">
                         <ul class="nav nav-tabs">
                          <li class="nav-item">
                           <a class="nav-link active_tab1" style="border:1px solid #ccc" id="list_login_details">ข้อมูลเจ้าของ</a>
                          </li>
                          <li class="nav-item">
-                          <a class="nav-link inactive_tab1" id="list_personal_details" style="border:1px solid #ccc">ข้อมูลน้องแมว</a>
+                          <a class="nav-link inactive_tab1" id="list_personal_details" style="border:1px solid #ccc">ข้อมูลสุนัข</a>
                          </li>
                          <li class="nav-item">
-                          <a class="nav-link inactive_tab1" id="list_contact_details" style="border:1px solid #ccc">เลือกนามบัตร</a>
+                          <a class="nav-link inactive_tab1" id="list_contact_details" style="border:1px solid #ccc">นามบัตร</a>
                          </li>
                         </ul>
                         <div class="tab-content" style="margin-top:16px;">
@@ -117,44 +117,19 @@
                           <div class="panel panel-default">
                            <div class="panel-heading">ข้อมูลเจ้าของ</div>
                            <div class="panel-body">
-                            <!-- <div class="form-group">
-                                <label>Enter Email Address</label>
-                                <input type="text" name="email" id="email" class="form-control" />
-                                <span id="error_email" class="text-danger"></span>
-                               </div> -->
-                               <div class="form-group">
-                                <label>Username(ชื่อผู้ใช้)</label>
-                                <input type="text" name="email" id="username" class="form-control" />
-                                <span id="error_username" class="text-danger"></span>
-                               </div>
                             <div class="form-group">
-                             <label>Password(รหัสผ่าน)</label>
+                             <label>Enter Email Address</label>
+                             <input type="text" name="email" id="email" class="form-control" />
+                             <span id="error_email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                             <label>Enter Password</label>
                              <input type="password" name="password" id="password" class="form-control" />
                              <span id="error_password" class="text-danger"></span>
                             </div>
-                            <div class="form-group">
-                                <label>Firstname(ชื่อจริง)</label>
-                                <input type="text" name="firstname" id="firstname" class="form-control" />
-                                <span id="text" class="text-danger"></span>
-                               </div>
-                               <div class="form-group">
-                                <label>Lastname(นามสกุลจริง)</label>
-                                <input type="text" name="lastname" id="lastname" class="form-control" />
-                                <span id="error_password" class="text-danger"></span>
-                               </div>
-                               <div class="form-group">
-                                <label>Telephone(เบอร์โทรศัพท์)</label>
-                                <input type="text" name="telephone" id="telephone" class="form-control" />
-                                <span id="error_password" class="text-danger"></span>
-                               </div>
-                               <div class="form-group">
-                                <label>Line(ไลน์)</label>
-                                <input type="text" name="telephone" id="telephone" class="form-control" />
-                                <span id="error_password" class="text-danger"></span>
-                               </div>
                             <br />
                             <div align="center">
-                             <button type="button" name="btn_login_details" id="btn_login_details" class="btn btn-success btn-lg">Next</button>
+                             <button type="button" name="btn_login_details" id="btn_login_details" class="btn btn-info btn-lg">Next</button>
                             </div>
                             <br />
                            </div>
@@ -162,7 +137,7 @@
                          </div>
                          <div class="tab-pane fade" id="personal_details">
                           <div class="panel panel-default">
-                           <div class="panel-heading">Fill Personal Details</div>
+                           <div class="panel-heading">ข้อมูลสุนัข</div>
                            <div class="panel-body">
                             <div class="form-group">
                              <label>Enter First Name</label>
@@ -186,7 +161,7 @@
                             <br />
                             <div align="center">
                              <button type="button" name="previous_btn_personal_details" id="previous_btn_personal_details" class="btn btn-default btn-lg">Previous</button>
-                             <button type="button" name="btn_personal_details" id="btn_personal_details" class="btn btn-success btn-lg">Next</button>
+                             <button type="button" name="btn_personal_details" id="btn_personal_details" class="btn btn-info btn-lg">Next</button>
                             </div>
                             <br />
                            </div>
@@ -194,7 +169,7 @@
                          </div>
                          <div class="tab-pane fade" id="contact_details">
                           <div class="panel panel-default">
-                           <div class="panel-heading">Fill Contact Details</div>
+                           <div class="panel-heading">นามบัตร</div>
                            <div class="panel-body">
                             <div class="form-group">
                              <label>Enter Address</label>
@@ -216,9 +191,141 @@
                           </div>
                          </div>
                         </div>
-                       </form>
-                    <!-- <form action="#" class="appointment">
+                       </form> -->
+                       <h2 class="mb-4">กรอกข้อมูลสมัครสมาชิก</h2>
+                    <form action="#" class="appointment">
+                    <h4 style="color:#fff">* ข้อมูลเจ้าของ</h4>
                         <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="ชื่อผู้ใช้ (Username)">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="รหัสผ่าน (Password)">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="ชื่อจริง (First Name)">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="นามสกุลจริง (Last Name)">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="อีเมล (Email)">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="เบอร์โทรศัพท์ (Telephone)">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="ไลน์ (Line)">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="เฟซบุ๊ก (Facebook)">
+                                </div>
+                            </div>
+                        </div>
+                        <h4 style="color:#fff">* ข้อมูลสุนัข</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="ชื่อสุนัข (Name)">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="file" class="form-control" placeholder="รูป (Photo)" eccept="image/*">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="input-wrap">
+                                        <div class="icon"><span class="fa fa-calendar"></span></div>
+                                        <input type="text" class="form-control appointment_date" placeholder="วันเกิด (ฺBirthdate)">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="form-field">
+                                        <div class="select-wrap">
+                                            <div class="icon"><span class="fa fa-chevron-down"></span></div>
+                                            <select name="" id="" class="form-control">
+                                                <option value="">เลือกเพศ (Gender)</option>
+                                                <option value="">ผู้</option>
+                                                <option value="">เมีย</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="form-field">
+                                        <div class="select-wrap">
+                                            <div class="icon"><span class="fa fa-chevron-down"></span></div>
+                                            <select name="" id="" class="form-control">
+                                                <option value="">เลือกกรุ๊ปเลือด (Blood)</option>
+                                                <option value="">A</option>
+                                                <option value="">B</option>
+                                                <option value="">AB</option>
+                                                <option value="">O</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="สี (Coat Color)">
+                                </div>
+                            </div>
+                            <!-- <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="input-wrap">
+                                        <div class="icon"><span class="fa fa-clock-o"></span></div>
+                                        <input type="text" class="form-control appointment_time" placeholder="Time">
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div class="form-field">
+                                        <div class="select-wrap">
+                                            <div class="icon"><span class="fa fa-chevron-down"></span></div>
+                                            <select name="" id="" class="form-control">
+                                                <option value="">เลือกลักษณะนิสัย (Personality)</option>
+                                                <option value="">ใจดี (Friendly)</option>
+                                                <option value="">ขี้อ้อนชอบคนตามใจ (Eager to Please)</option>
+                                                <option value="">ขี้เล่น (Playful)</option>
+                                                <option value="">ตื่นเต้น/กระวนกระวาย (Nervous/Anxious)</option>
+                                                <option value="">หวงของ หวงเจ้าของ (Bossy)</option>
+                                                <option value="">ดื้อ (Stubborn)</option>
+                                                <option value="">ดุก้าวร้าว ไม่สุงสิงกับใคร (Aggressive)</option>
+                                                <option value="">ขี้อาย/เรียบร้อย (Shy/Timid)</option>
+                                                <option value="">เอาแน่เอานอนไม่ได้ แล้วแต่อารมณ์ (Unpredictable)</option>
+                                                <option value="">คึกคัก ร่าเริง (Alert)</option>
+                                                <option value="">ตกใจง่ายขี้กลัว (Easily Frightened)</option>
+                                                <option value="">เข้าได้ง่ายกับทุกคน (Good with Everyone)</option>
+                                                <option value="">ชอบกินมากที่สุด (Food Lover)</option>
+                                                <option value="">ขี้เซาที่สุด (Sleepyhead)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <div class="form-field">
@@ -239,47 +346,44 @@
                                             </select>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Name">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Vehicle number">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <div class="input-wrap">
-                                        <div class="icon"><span class="fa fa-calendar"></span></div>
-                                        <input type="text" class="form-control appointment_date" placeholder="Date">
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <div class="input-wrap">
-                                        <div class="icon"><span class="fa fa-clock-o"></span></div>
-                                        <input type="text" class="form-control appointment_time" placeholder="Time">
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
+                            </div>  <h4 style="color:#fff">* เลือกนามบัตรสุนัข</h4>
+                        <div class="row">
+                        <div class="col-md-12">
+                                <div class="form-group">
+                                    <div class="form-field">
+                                        <div class="select-wrap">
+                                            <div class="icon"><span class="fa fa-chevron-down"></span></div>
+                                            <select name="" id="" class="form-control">
+                                                <option value="">นามบัตรที่1</option>
+                                                <option value="">นามบัตรที่2</option>
+                                                <option value="">นามบัตรที่3</option>
+                                                <option value="">นามบัตรที่4</option>
+                                                <option value="">นามบัตรที่5</option>
+                                                <option value="">นามบัตรที่6</option>
+                                                <option value="">นามบัตรที่7</option>
+                                                <option value="">นามบัตรที่8</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                        </div>
+                            
+                            <!-- <div class="col-md-12">
                                 <div class="form-group">
                                     <textarea name="" id="" cols="30" rows="7" class="form-control"
                                         placeholder="Message"></textarea>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <input type="submit" value="Send message" class="btn btn-primary py-3 px-4">
                                 </div>
                             </div>
                         </div>
-                    </form> -->
+                    </form>
                 </div>
             </div>
         </div>

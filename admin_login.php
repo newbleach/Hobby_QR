@@ -1,40 +1,51 @@
+<?php
+  session_start();
+    if(isset($_SESSION['AdminID'] )){
+          if ($_SESSION['AdminLevel'] == 'admin') {
+                header("Location: admin/index.php");
+            } else {
+          echo "<script>alert('User หรือ Password ไม่ถูกต้อง');</script>";
+        }
+    exit();
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Member Login</title>
+	<title>Admin Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="../assets/images/icons/favicon.ico"/>
+	<link rel="icon" type="image/png" href="assets/images/icons/favicon.ico"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
-	<!-- <link rel="stylesheet" type="text/css" href="../assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css"> -->
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../assets/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/animate/animate.css">
 <!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="../assets/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../assets/vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../assets/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/select2/select2.min.css">
 <!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="../assets/vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../assets/css/util.css">
-	<link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/util.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 <!--===============================================================================================-->
 <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap"
 rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="../css/animate.css">
-<link rel="stylesheet" href="../css/owl.carousel.min.css">
-<link rel="stylesheet" href="../css/owl.theme.default.min.css">
-<link rel="stylesheet" href="../css/magnific-popup.css">
-<link rel="stylesheet" href="../css/bootstrap-datepicker.css">
-<link rel="stylesheet" href="../css/jquery.timepicker.css">
-<link rel="stylesheet" href="../css/flaticon.css">
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="css/jquery.timepicker.css">
+<link rel="stylesheet" href="css/flaticon.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="wrap">
@@ -61,20 +72,20 @@ rel="stylesheet">
 	</div>
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	<div class="container">
-		<a class="navbar-brand" href="../index.html"><span class="fa fa-qrcode mr-2"></span>HobbyQR</a>
+		<a class="navbar-brand" href="index.php"><span class="fa fa-qrcode mr-2"></span>HobbyQR</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="fa fa-bars"></span> Menu
 	  </button>
 	  <div class="collapse navbar-collapse" id="ftco-nav">
 		<ul class="navbar-nav ml-auto">
-			<li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-			<li class="nav-item"><a href="../login.html" class="nav-link">Login</a></li>
-			<li class="nav-item"><a href="../dtag.html" class="nav-link">DTag</a></li>
-			<li class="nav-item"><a href="../ctag.html" class="nav-link">CTag</a></li>
-		  <li class="nav-item"><a href="../ttag.html" class="nav-link">TTag</a></li>
-		  <li class="nav-item"><a href="../product.html" class="nav-link">Product</a></li>
-		  <li class="nav-item"><a href="../about.html" class="nav-link">About Us</a></li>
-		  <li class="nav-item"><a href="../admin_login.html" class="nav-link">Admin</a></li>
+			<li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+			<li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>
+			<li class="nav-item"><a href="dtag.php" class="nav-link">DTag</a></li>
+			<li class="nav-item"><a href="ctag.php" class="nav-link">CTag</a></li>
+		  <li class="nav-item"><a href="ttag.php" class="nav-link">TTag</a></li>
+		  <li class="nav-item"><a href="product.php" class="nav-link">Product</a></li>
+		  <li class="nav-item"><a href="about.php" class="nav-link">About Us</a></li>
+		  <li class="nav-item active"><a href="admin_login.php" class="nav-link">Admin</a></li>
 		</ul>
 	  </div>
 	</div>
@@ -84,18 +95,18 @@ rel="stylesheet">
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form p-l-55 p-r-55 p-t-178">
+				<form action="action_login_admin.php" method="post" class="login100-form validate-form p-l-55 p-r-55 p-t-178">
 					<span class="login100-form-title">
-						Member Login
+						Admin Login
 					</span>
 
 					<div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
-						<input class="input100" type="text" name="username" placeholder="Username">
+						<input class="input100" type="text" name="AdminUsername" placeholder="Username">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Please enter password">
-						<input class="input100" type="password" name="pass" placeholder="Password">
+						<input class="input100" type="password" name="AdminPassword" placeholder="Password">
 						<span class="focus-input100"></span>
 					</div>
 
@@ -110,11 +121,12 @@ rel="stylesheet">
 					</div>
 
 					<div class="container-login100-form-btn">
-						<a style="color: #fff;"class="login100-form-btn" href="./index.php">Login</a>
-
-						<!-- <button class="login100-form-btn">
+						<!-- <a style="color: #fff;"class="login100-form-btn" href="./admin/index.php">Login</a> -->
+						<button class="login100-form-btn" type="submit" name="submit">
 							Login
-						</button> -->
+						</button>
+						<!-- <input type="submit" class=btnsubmit name="submit" value="เข้าสู่ระบบ"> -->
+
 					</div>
 
 					<div class="flex-col-c p-t-50 p-b-40">
@@ -133,38 +145,38 @@ rel="stylesheet">
 	
 	
 <!--===============================================================================================-->
-	<script src="../assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="assets/vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
-	<script src="../assets/vendor/animsition/js/animsition.min.js"></script>
+	<script src="assets/vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
-	<script src="../assets/vendor/bootstrap/js/popper.js"></script>
-	<script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/vendor/bootstrap/js/popper.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
-	<script src="../assets/vendor/select2/select2.min.js"></script>
+	<script src="assets/vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
-	<script src="../assets/vendor/daterangepicker/moment.min.js"></script>
-	<script src="../assets/vendor/daterangepicker/daterangepicker.js"></script>
+	<script src="assets/vendor/daterangepicker/moment.min.js"></script>
+	<script src="assets/vendor/daterangepicker/daterangepicker.js"></script>
 <!--===============================================================================================-->
-	<script src="../assets/vendor/countdowntime/countdowntime.js"></script>
+	<script src="assets/vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
-	<script src="../assets/js/main.js"></script>
-	<script src="../js/jquery.min.js"></script>
-  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="../js/popper.min.js"></script>
-  <script src="../js/bootstrap.min.js"></script>
-  <script src="../js/jquery.easing.1.3.js"></script>
-  <script src="../js/jquery.waypoints.min.js"></script>
-  <script src="../js/jquery.stellar.min.js"></script>
-  <script src="../js/jquery.animateNumber.min.js"></script>
-  <script src="../js/bootstrap-datepicker.js"></script>
-  <script src="../js/jquery.timepicker.min.js"></script>
-  <script src="../js/owl.carousel.min.js"></script>
-  <script src="../js/jquery.magnific-popup.min.js"></script>
-  <script src="../js/scrollax.min.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="../js/google-map.js"></script>
-  <script src="../js/main.js"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 </html>
