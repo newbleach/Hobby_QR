@@ -1,3 +1,13 @@
+<?php 
+include('./include_menu.php'); 
+
+$query = "SELECT * FROM tbl_dog_breed" or die("Error:" . mysqli_error());
+$result = mysqli_query($condb, $query);
+
+$query2 = "SELECT * FROM tbl_templates" or die("Error:" . mysqli_error());
+$result2 = mysqli_query($condb, $query2);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -193,47 +203,47 @@
                         </div>
                        </form> -->
                        <h2 class="mb-4">กรอกข้อมูลสมัครสมาชิก</h2>
-                    <form action="#" class="appointment">
+                    <form role="form" action="dtag_register_db.php" method="post" name="form1" class="appointment" enctype="multipart/form-data">
                     <h4 style="color:#fff">* ข้อมูลเจ้าของ</h4>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="ชื่อผู้ใช้ (Username)">
+                                    <input type="text" name="Username" class="form-control" placeholder="ชื่อผู้ใช้ (Username)">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="รหัสผ่าน (Password)">
+                                    <input type="text" name="Password" class="form-control" placeholder="รหัสผ่าน (Password)">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="ชื่อจริง (First Name)">
+                                    <input type="text" name="FirstName" class="form-control" placeholder="ชื่อจริง (First Name)">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="นามสกุลจริง (Last Name)">
+                                    <input type="text" name="LastName" class="form-control" placeholder="นามสกุลจริง (Last Name)">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="อีเมล (Email)">
+                                    <input type="text" name="Email" class="form-control" placeholder="อีเมล (Email)">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="เบอร์โทรศัพท์ (Telephone)">
+                                    <input type="text" name="Telephone" class="form-control" placeholder="เบอร์โทรศัพท์ (Telephone)">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="ไลน์ (Line)">
+                                    <input type="text" name="Line" class="form-control" placeholder="ไลน์ (Line)">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="เฟซบุ๊ก (Facebook)">
+                                    <input type="text" name="Facebook" class="form-control" placeholder="เฟซบุ๊ก (Facebook)">
                                 </div>
                             </div>
                         </div>
@@ -241,19 +251,19 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="ชื่อสุนัข (Name)">
+                                    <input type="text" name="DogName" class="form-control" placeholder="ชื่อสุนัข (Name)">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="file" class="form-control" placeholder="รูป (Photo)" eccept="image/*">
+                                    <input type="file" name="DogPhoto" class="form-control" placeholder="รูป (Photo)" eccept="image/*">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <div class="input-wrap">
                                         <div class="icon"><span class="fa fa-calendar"></span></div>
-                                        <input type="text" class="form-control appointment_date" placeholder="วันเกิด (ฺBirthdate)">
+                                        <input type="text" name="DogBirthdate" class="form-control appointment_date" placeholder="วันเกิด (ฺBirthdate)">
                                     </div>
                                 </div>
                             </div>
@@ -262,10 +272,10 @@
                                     <div class="form-field">
                                         <div class="select-wrap">
                                             <div class="icon"><span class="fa fa-chevron-down"></span></div>
-                                            <select name="" id="" class="form-control">
+                                            <select name="DogGender" id="" class="form-control">
                                                 <option value="">เลือกเพศ (Gender)</option>
-                                                <option value="">ผู้</option>
-                                                <option value="">เมีย</option>
+                                                <option value="ผู้">ผู้</option>
+                                                <option value="เมีย">เมีย</option>
                                             </select>
                                         </div>
                                     </div>
@@ -276,12 +286,12 @@
                                     <div class="form-field">
                                         <div class="select-wrap">
                                             <div class="icon"><span class="fa fa-chevron-down"></span></div>
-                                            <select name="" id="" class="form-control">
+                                            <select name="DogBlood" id="" class="form-control">
                                                 <option value="">เลือกกรุ๊ปเลือด (Blood)</option>
-                                                <option value="">A</option>
-                                                <option value="">B</option>
-                                                <option value="">AB</option>
-                                                <option value="">O</option>
+                                                <option value="A">A</option>
+                                                <option value="B">B</option>
+                                                <option value="AB">AB</option>
+                                                <option value="O">O</option>
                                             </select>
                                         </div>
                                     </div>
@@ -289,7 +299,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="สี (Coat Color)">
+                                    <input type="text" name="DogCoatColor" class="form-control" placeholder="สี (Coat Color)">
                                 </div>
                             </div>
                             <!-- <div class="col-md-6">
@@ -305,22 +315,22 @@
                                     <div class="form-field">
                                         <div class="select-wrap">
                                             <div class="icon"><span class="fa fa-chevron-down"></span></div>
-                                            <select name="" id="" class="form-control">
+                                            <select name="DogPersonality" id="" class="form-control">
                                                 <option value="">เลือกลักษณะนิสัย (Personality)</option>
-                                                <option value="">ใจดี (Friendly)</option>
-                                                <option value="">ขี้อ้อนชอบคนตามใจ (Eager to Please)</option>
-                                                <option value="">ขี้เล่น (Playful)</option>
-                                                <option value="">ตื่นเต้น/กระวนกระวาย (Nervous/Anxious)</option>
-                                                <option value="">หวงของ หวงเจ้าของ (Bossy)</option>
-                                                <option value="">ดื้อ (Stubborn)</option>
-                                                <option value="">ดุก้าวร้าว ไม่สุงสิงกับใคร (Aggressive)</option>
-                                                <option value="">ขี้อาย/เรียบร้อย (Shy/Timid)</option>
-                                                <option value="">เอาแน่เอานอนไม่ได้ แล้วแต่อารมณ์ (Unpredictable)</option>
-                                                <option value="">คึกคัก ร่าเริง (Alert)</option>
-                                                <option value="">ตกใจง่ายขี้กลัว (Easily Frightened)</option>
-                                                <option value="">เข้าได้ง่ายกับทุกคน (Good with Everyone)</option>
-                                                <option value="">ชอบกินมากที่สุด (Food Lover)</option>
-                                                <option value="">ขี้เซาที่สุด (Sleepyhead)</option>
+                                                <option value="ใจดี (Friendly)">ใจดี (Friendly)</option>
+                                                <option value="ขี้อ้อนชอบคนตามใจ (Eager to Please)">ขี้อ้อนชอบคนตามใจ (Eager to Please)</option>
+                                                <option value="ขี้เล่น (Playful)">ขี้เล่น (Playful)</option>
+                                                <option value="ตื่นเต้น/กระวนกระวาย (Nervous/Anxious)">ตื่นเต้น/กระวนกระวาย (Nervous/Anxious)</option>
+                                                <option value="หวงของ หวงเจ้าของ (Bossy)">หวงของ หวงเจ้าของ (Bossy)</option>
+                                                <option value="ดื้อ (Stubborn)">ดื้อ (Stubborn)</option>
+                                                <option value="ดุก้าวร้าว ไม่สุงสิงกับใคร (Aggressive)">ดุก้าวร้าว ไม่สุงสิงกับใคร (Aggressive)</option>
+                                                <option value="ขี้อาย/เรียบร้อย (Shy/Timid)">ขี้อาย/เรียบร้อย (Shy/Timid)</option>
+                                                <option value="เอาแน่เอานอนไม่ได้ แล้วแต่อารมณ์ (Unpredictable)">เอาแน่เอานอนไม่ได้ แล้วแต่อารมณ์ (Unpredictable)</option>
+                                                <option value="คึกคัก ร่าเริง (Alert)">คึกคัก ร่าเริง (Alert)</option>
+                                                <option value="ตกใจง่ายขี้กลัว (Easily Frightened)">ตกใจง่ายขี้กลัว (Easily Frightened)</option>
+                                                <option value="เข้าได้ง่ายกับทุกคน (Good with Everyone)">เข้าได้ง่ายกับทุกคน (Good with Everyone)</option>
+                                                <option value="ชอบกินมากที่สุด (Food Lover)">ชอบกินมากที่สุด (Food Lover)</option>
+                                                <option value="ขี้เซาที่สุด (Sleepyhead)">ขี้เซาที่สุด (Sleepyhead)</option>
                                             </select>
                                         </div>
                                     </div>
@@ -331,39 +341,32 @@
                                     <div class="form-field">
                                         <div class="select-wrap">
                                             <div class="icon"><span class="fa fa-chevron-down"></span></div>
-                                            <select name="" id="" class="form-control">
-                                                <option value="">เลือกพันธ์</option>
-                                                <option value="">ชิวาวา</option>
-                                                <option value="">ปอมเมอเรเนียน</option>
-                                                <option value="">ชิสุ</option>
-                                                <option value="">ยอร์คเชียร์เทอร์เรียร์</option>
-                                                <option value="">บีเกิล</option>
-                                                <option value="">ปั๊ก</option>
-                                                <option value="">บูลค็อก</option>
-                                                <option value="">โกลเด็นรีทรีฟเวอร์</option>
-                                                <option value="">ไซบีเรียนฮัสกี้</option>
-                                                <option value="">ลาบรุเดอร์รีทรีฟเวอร์</option>
+                                            <select name="Ref_DogBreedID" id="" class="form-control">
+                                            <option value="">เลือกพันธุ์สุนัข</option>
+                                            <?php foreach($result as $results){ ?>
+                                        <option value="<?php echo $results["DogBreedID"];?>">
+                                            <?php echo $results["DogBreedName"];?>
+                                        </option>
+                                        <?php } ?>
                                             </select>
                                         </div>
                                     </div>
                                     </div>
                                     </div>
-                            </div>  <h4 style="color:#fff">* เลือกนามบัตรสุนัข</h4>
+                            </div>  <h4 style="color:#fff">* นามบัตรสุนัข</h4>
                         <div class="row">
                         <div class="col-md-12">
                                 <div class="form-group">
                                     <div class="form-field">
                                         <div class="select-wrap">
                                             <div class="icon"><span class="fa fa-chevron-down"></span></div>
-                                            <select name="" id="" class="form-control">
-                                                <option value="">นามบัตรที่1</option>
-                                                <option value="">นามบัตรที่2</option>
-                                                <option value="">นามบัตรที่3</option>
-                                                <option value="">นามบัตรที่4</option>
-                                                <option value="">นามบัตรที่5</option>
-                                                <option value="">นามบัตรที่6</option>
-                                                <option value="">นามบัตรที่7</option>
-                                                <option value="">นามบัตรที่8</option>
+                                            <select name="Ref_TemplateID" id="" class="form-control">
+                                            <option value="Ref_TemplateID">เลือกนามบัตรสุนัข</option>
+                                            <?php foreach($result2 as $results2){ ?>
+                                        <option value="<?php echo $results2["TemplateID"];?>">
+                                            <?php echo $results2["TemplateName"];?>
+                                        </option>
+                                        <?php } ?>
                                             </select>
                                         </div>
                                     </div>
@@ -379,6 +382,8 @@
                             </div> -->
                             <div class="col-md-12">
                                 <div class="form-group">
+                                <input type="hidden" name="Ref_QrCodeID" value="3">
+                        <input type="hidden" name="Ref_OwnerID" value="3">
                                     <input type="submit" value="Send message" class="btn btn-primary py-3 px-4">
                                 </div>
                             </div>

@@ -94,9 +94,11 @@
       </div>
     </div>
   </div>
-  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light fixed-top" id="ftco-navbar">
     <div class="container">
-      <a class="navbar-brand" href="index.php"><span class="fa fa-qrcode mr-2"></span>HobbyQR</a>
+    <!-- <span class="fa fa-qrcode mr-2"></span>HobbyQR -->
+      <a class="navbar-brand" href="index.php"> <img src="./images/logo/icon-1_72.png" alt=""></a>
+     
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
         aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="fa fa-bars"></span> Menu
@@ -117,7 +119,7 @@
     </div>
   </nav>
   <!-- END nav -->
-  <div class="hero-wrap js-fullheight" style="background-image: url('./images/imageCoverPage.png');"
+  <div class="hero-wrap js-fullheight" style="background-image: url('./images/cover/imagecover.png');"
     data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
@@ -146,7 +148,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
-          <div class="d-block services active text-center">
+        <!-- active -->
+          <div class="d-block services text-center">
             <div class="icon d-flex align-items-center justify-content-center">
               <!-- <span class="flaticon-blind"></span> -->
               <img src="images/icon/dog.svg" alt="" width="50px">

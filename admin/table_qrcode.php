@@ -29,7 +29,7 @@
                 <div class="card">
                     <div class="card-header">
                     <!-- <a class="btn btn-secondary btn-sm" href="../file/code_board.php" title="PDF [new window]" target="_blank"><i class="fas fa-print"> พิมพ์รายงาน</i></a> -->
-                        <a class="float-right btn btn-success btn-sm" href="https://www.avast.com/th-th/random-password-generator   ">
+                        <a class="float-right btn btn-success btn-sm" href="./create_qrcode.php">
                         <i class="fas fa-plus-circle"></i>
                             </i>
                             เพิ่มข้อมูล
@@ -37,70 +37,51 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                      <table  id='example1' class='table table-bordered table-striped projects'>
+                               <?php
+                            $query = "
+                            SELECT * FROM tbl_qrcode as q 
+                            INNER JOIN tbl_products as d ON q.Ref_ProductID = d.ProductID 
+                            ORDER BY QrCodeID DESC" or die("Error:" . mysqli_error());
+                            $result = mysqli_query($condb, $query); 
+                                echo "<table  id='example1' class='table table-bordered table-striped'>";
+                                    echo "
                                         <thead>
-                                            <tr align='center'>
-                                            <th>ลำดับ</th>
-                                            <th>รหัส</th>
-                                            <th>รหัสภาพคิวอาร์โค้ด</th>
-                                            <th>สถานะ</th>
-                                            <th>จัดการ</th>
-                                            </tr>
+                                        <tr align='center'>
+                                        <th>ลำดับ</th>
+                                        <th>รหัส</th>
+                                        <th>รหัสคิวอาร์โค้ด</th>
+                                        <th>ภาพคิวอาร์โค้ด</th>
+                                        <th>รูปสินค้า</th>
+                                        <th>สถานะ</th>
+                                        </tr>
                                         </thead>
-                                   <tr>
-                                            <td>1</td>
-                                            <td>Q0001</td>
-                                            <td>2DxezGg13DE25J2</td>
-                                            <td><span class="badge bg-success">เปิดใช้งานแล้ว</span></td>
-                                            <td class='project-actions text-center'>
-                                            <a href='read_board.php?ID=$row[0]' class='btn btn-primary btn-sm'> <i class='fas fa-eye'>
-                                            </i></a>
-                                           </td>
-                                    </tr>
-                                    <tr>
-                                            <td>2</td>
-                                            <td>Q0002</td>
-                                            <td>Vc7C4kvBOkKcmYA</td>
-                                            <td><span class="badge bg-danger">ยังไม่เปิดใช้งาน</span></td>
-                                            <td class='project-actions text-center'>
-                                            <a href='read_board.php?ID=$row[0]' class='btn btn-primary btn-sm'> <i class='fas fa-eye'>
-                                            </i></a>
-                                           </td>
-                                    </tr>
-                                    <tr>
-                                            <td>3</td>
-                                            <td>Q0003</td>
-                                            <td>dWaM6hgfq8bOr9K</td>
-                                            <td><span class="badge bg-danger">ยังไม่เปิดใช้งาน</span></td>
-                                            <td class='project-actions text-center'>
-                                            <a href='read_board.php?ID=$row[0]' class='btn btn-primary btn-sm'> <i class='fas fa-eye'>
-                                            </i></a>
-                                           </td>
-                                    </tr>
-                                    <tr>
-                                            <td>4</td>
-                                            <td>Q0004</td>
-                                            <td>ITWNdCAHtHjLamP</td>
-                                            <td><span class="badge bg-success">เปิดใช้งาน</span></td>
-                                            <td class='project-actions text-center'>
-                                            <a href='read_board.php?ID=$row[0]' class='btn btn-primary btn-sm'> <i class='fas fa-eye'>
-                                            </i></a>
-                                           </td>
-                                    </tr>
-                                    <tr>
-                                            <td>5</td>
-                                            <td>Q0005</td>
-                                            <td>akPrUCTNjd0aCPk</td>
-                                            <td><span class="badge bg-success">เปิดใช้งาน</span></td>
-                                            <td class='project-actions text-center'>
-                                            <a href='read_board.php?ID=$row[0]' class='btn btn-primary btn-sm'> <i class='fas fa-eye'>
-                                            </i></a>
-                                           </td>
-                                    </tr>
-                                   
-                                  
-                                        
-                               </table>
+                                    ";
+                                    $item = 0;
+                                    while($row = mysqli_fetch_array($result)) { 
+                                        $item +=1;
+                                        echo "<tr>";
+                                        echo "<td align='center'>".$item.'.'. "</td>";
+                                        echo "<td align='center'>" .'QR'.$row["QrCodeID"] . "</td> "; 
+                                        echo "<td align='center'>" .$row["QrCodeName"] . "</td> ";
+                                        echo "<td align='center'>"."<img class='table-avatar' width='150px' alt='image' src='https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=.".$row['QrCodeName']."'>"."</td>";
+                                        echo "<td align='center'>"."<img class='table-avatar' width='300px' alt='image' src='./image/products/".$row['ProductImage']."'>"."</td>";
+                                        echo "<td align='center'>" .$row["QRStatus"] . "</td> "; 
+                                    }
+                                    echo "
+                                        <tfoot>
+                                        <tr align='center'>
+                                        <th>ลำดับ</th>
+                                        <th>รหัส</th>
+                                        <th>รหัสคิวอาร์โค้ด</th>
+                                        <th>ภาพคิวอาร์โค้ด</th>
+                                        <th>รูปสินค้า</th>
+                                        <th>สถานะ</th>
+                                        </tr>
+                                        </tfoot>
+                                    ";
+                                echo "</table>";
+                            mysqli_close($condb);
+                        ?>
                     </div>
                     <!-- /.card-body -->
                 </div>

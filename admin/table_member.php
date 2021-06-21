@@ -29,81 +29,57 @@
                 <div class="card">
                     <!-- /.card-header -->
                     <div class="card-body">
-                      <table  id='example1' class='table table-bordered table-striped projects'>
+                    <?php
+                            $query = "SELECT * FROM tbl_owner as n
+                            INNER JOIN tbl_dog as d ON d.Ref_OwnerID = n.OwnerID" or die("Error:" . mysqli_error());
+                            $result = mysqli_query($condb, $query); 
+                                echo "<table  id='example1' class='table table-bordered table-striped'>";
+                                    echo "
                                         <thead>
                                             <tr align='center'>
                                             <th>ลำดับ</th>
                                             <th>รหัส</th>
-                                            <th>ชื่อ-นามสกุล</th>
+                                            <th>ชื่อสัตว์เลี้ยง</th>
+                                            <th>รูปสัตว์เลี้ยง</th>
+                                            <th>ชื่อเจ้าของ</th>
                                             <th>เบอร์โทรศัพท์</th>
-                                            <th>ไลน์</th>
-                                            <th>เฟสบุ๊ค</th>
                                             <th>จัดการ</th>
                                             </tr>
                                         </thead>
-                                   <tr>
-                                            <td>1</td>
-                                            <td>M0001</td>
-                                            <td>นาย หนึ่ง</td>
-                                            <td>062155542</td>
-                                            <td>one</td>
-                                            <td>@one</td>
-                                            <td class='project-actions text-center'>
-                                            <a href='read_board.php?ID=$row[0]' class='btn btn-primary btn-sm'> <i class='fas fa-eye'>
-                                            </i></a>
-                                            </td>
-                                    </tr>
-                                    <tr>
-                                            <td>2</td>
-                                            <td>M0002</td>
-                                            <td>นาย สอง</td>
-                                            <td>062155542</td>
-                                            <td>two</td>
-                                            <td>@two</td>
-                                            <td class='project-actions text-center'>
-                                            <a href='read_board.php?ID=$row[0]' class='btn btn-primary btn-sm'> <i class='fas fa-eye'>
-                                            </i></a>
-                                            </td>
-                                    </tr>
-                                    <tr>
-                                            <td>3</td>
-                                            <td>M0003</td>
-                                            <td>นาย สาม</td>
-                                            <td>062155542</td>
-                                            <td>three</td>
-                                            <td>@three</td>
-                                            <td class='project-actions text-center'>
-                                            <a href='read_board.php?ID=$row[0]' class='btn btn-primary btn-sm'> <i class='fas fa-eye'>
-                                            </i></a>
-                                            </td>
-                                    </tr>
-                                    <tr>
-                                            <td>4</td>
-                                            <td>M0004</td>
-                                            <td>นาย สี่</td>
-                                            <td>062155542</td>
-                                            <td>four</td>
-                                            <td>@four</td>
-                                            <td class='project-actions text-center'>
-                                            <a href='read_board.php?ID=$row[0]' class='btn btn-primary btn-sm'> <i class='fas fa-eye'>
-                                            </i></a>
-                                            </td>
-                                    </tr>
-                                    <tr>
-                                            <td>5</td>
-                                            <td>M0005</td>
-                                            <td>นาย ห้า</td>
-                                            <td>062155542</td>
-                                            <td>five</td>
-                                            <td>@five</td>
-                                            <td class='project-actions text-center'>
-                                            <a href='read_board.php?ID=$row[0]' class='btn btn-primary btn-sm'> <i class='fas fa-eye'>
-                                            </i></a>
-                                            </td>
-                                    </tr>
-                                  
-                                        
-                               </table>
+                                    ";
+                                    $item = 0;
+                                    while($row = mysqli_fetch_array($result)) { 
+                                        $item +=1;
+                                        echo "<tr>";
+                                        echo "<td align='center'>".$item.'.'. "</td>";
+                                        echo "<td align='center'>" .'OWN'.$row["DogID"] . "</td> "; 
+                                        echo "<td>" .$row["DogName"] . "</td> "; 
+                                        echo "<td align='center'>"."<img class='table-avatar' width='300px' alt='image' src='../member/image/profile/".$row['DogPhoto']."'>"."</td>";
+                                        echo "<td>" .$row["FirstName"] .' '.$row["LastName"] . "</td> "; 
+                                        echo "<td align='center'>" .$row["Telephone"] . "</td> "; 
+                                        echo "<td class='project-actions text-center'>
+                                        <a href='read_board.php?ID=$row[0]' class='btn btn-info btn-sm'> <i class='fas fa-eye'>
+                                        </i></a>
+                                        <a href='update_pro_dtag.php?ID=$row[0]' class='btn btn-info btn-sm'> <i class='fas fa-pencil-alt'>
+                                        </i></a>
+                                        </td> ";
+                                    }
+                                    echo "
+                                        <tfoot>
+                                            <tr align='center'>
+                                            <th>ลำดับ</th>
+                                            <th>รหัส</th>
+                                            <th>ชื่อสัตว์เลี้ยง</th>
+                                            <th>รูปสัตว์เลี้ยง</th>
+                                            <th>ชื่อเจ้าของ</th>
+                                            <th>เบอร์โทรศัพท์</th>
+                                            <th>จัดการ</th>
+                                            </tr>
+                                        </tfoot>
+                                    ";
+                                echo "</table>";
+                            mysqli_close($condb);
+                        ?>
                     </div>
                     <!-- /.card-body -->
                 </div>

@@ -1,5 +1,26 @@
 <?php
 include('./include_menu.php'); 
+$query = "
+SELECT COUNT(QrCodeID) FROM tbl_qrcode" 
+or die("Error:" . mysqli_error());
+$result = mysqli_query($condb, $query);
+
+$query2 = "
+SELECT COUNT(OwnerID) FROM tbl_owner"
+or die("Error:" . mysqli_error());
+$result2 = mysqli_query($condb, $query2);  
+//echo $query;
+
+$query3 = "
+SELECT COUNT(ProductID) FROM tbl_products"
+or die("Error:" . mysqli_error());
+$result3 = mysqli_query($condb, $query3);  
+//echo $query;
+
+$query4 = "
+SELECT COUNT(TemplateID) FROM tbl_templates"
+or die("Error:" . mysqli_error());
+$result4 = mysqli_query($condb, $query4);  
 ?>
 <br><br>
 <!-- Content Wrapper. Contains page content -->
@@ -25,25 +46,29 @@ include('./include_menu.php');
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
             <div class="row">
-            <div class="col-lg-3 col-6">
+            <?php while($row = mysqli_fetch_array($result)) { ?>
+                <div class="col-lg-3 col-6">
                     <!-- small box -->
                     <div class="small-box bg-danger">
                         <div class="inner">
-                            <h3>90</h3>
+                            <h3><?php echo $row['COUNT(QrCodeID)'];?></h3>
+
                             <p>จำนวนคิวอาร์โค้ด</p>
                         </div>
                         <div class="icon">
                             <i class="fa fa-qrcode"></i>
                         </div>
-                        <a href="table_death.php" class="small-box-footer">ดูข้อมูล <i
+                        <a href="table_qrcode.php" class="small-box-footer">ดูข้อมูล <i
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
+                <?php } ?>
+                <?php while($row = mysqli_fetch_array($result2)) { ?>
                 <div class="col-lg-3 col-6">
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3>50</h3>
+                            <h3><?php echo $row['COUNT(OwnerID)'];?></h3>
 
                             <p>จำนวนสมาชิก</p>
                         </div>
@@ -54,12 +79,14 @@ include('./include_menu.php');
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
+                <?php } ?>
                 <!-- ./col -->
+                <?php while($row = mysqli_fetch_array($result3)) { ?>
                 <div class="col-lg-3 col-6">
                     <!-- small box -->
                     <div class="small-box bg-info">
                         <div class="inner">
-                            <h3>50</h3>
+                            <h3><?php echo $row['COUNT(ProductID)'];?></h3>
                             <!-- <sup style="font-size: 20px">%</sup> -->
                             <p>จำนวนสินค้า</p>
                         </div>
@@ -70,12 +97,14 @@ include('./include_menu.php');
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
+                <?php } ?>
                 <!-- ./col -->
+                <?php while($row = mysqli_fetch_array($result4)) { ?>
                 <div class="col-lg-3 col-6">
                     <!-- small box -->
                     <div class="small-box bg-warning">
                         <div class="inner">
-                            <h3>120</h3>
+                            <h3><?php echo $row['COUNT(TemplateID)'];?></h3>
                             <p>จำนวนนามบัตร</p>
                         </div>
                         <div class="icon">
@@ -85,6 +114,7 @@ include('./include_menu.php');
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
+                <?php } ?>
                 <!-- ./col -->
               
                 <!-- ./col -->
