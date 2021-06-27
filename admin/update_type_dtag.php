@@ -54,10 +54,41 @@ extract($row);
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label>วิธีดูแล</label>
-                                    <textarea name="DogBreedCare" class="form-control" rows="3"><?php echo $row['DogBreedCare'];?></textarea>
+                                    <label>ข้อมูลทั่วไปและลักษณะนิสัย</label>
+                                    <input type="text" name="DogBreedPersonality" class="form-control" value="<?php echo $row['DogBreedPersonality'];?>">
                                 </div>
                             </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>บุคลิก</label>
+                                    <input type="text" name="DogBreedCharacter" class="form-control" value="<?php echo $row['DogBreedCharacter'];?>">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>วิธีดูแล</label>
+                                    <input type="text" name="DogBreedCare" class="form-control" value="<?php echo $row['DogBreedCare'];?>">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>ผู้เลี้ยงที่เหมาะกับสายพันธ์ุ</label>
+                                    <input type="text" name="DogBreedHerdsman" class="form-control" value="<?php echo $row['DogBreedHerdsman'];?>">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>ภาวะปัญหาสุขภาพของสายพันธุ์</label>
+                                    <input type="text" name="DogBreedHealthIssues" class="form-control" value="<?php echo $row['DogBreedHealthIssues'];?>">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>ความต้องการด้านสารอาหารของสุนัข</label>
+                                    <input type="text" name="DogBreedNutrients" class="form-control" value="<?php echo $row['DogBreedNutrients'];?>">
+                                </div>
+                            </div>
+                       
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">

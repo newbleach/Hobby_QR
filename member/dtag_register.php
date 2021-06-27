@@ -1,5 +1,5 @@
 <?php 
-include('./include_menu.php'); 
+include('../condb.php'); 
 
 $query = "SELECT * FROM tbl_dog_breed" or die("Error:" . mysqli_error());
 $result = mysqli_query($condb, $query);
@@ -383,7 +383,7 @@ $result2 = mysqli_query($condb, $query2);
                             <div class="col-md-12">
                                 <div class="form-group">
                                 <input type="hidden" name="Ref_QrCodeID" value="3">
-                        <input type="hidden" name="Ref_OwnerID" value="3">
+                                <input type="hidden" name="Ref_OwnerID" value="3">
                                     <input type="submit" value="Send message" class="btn btn-primary py-3 px-4">
                                 </div>
                             </div>

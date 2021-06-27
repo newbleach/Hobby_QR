@@ -4,12 +4,22 @@
 include('../condb.php'); 
 
 	$DogBreedName = $_POST["DogBreedName"];
+	$DogBreedPersonality = $_POST["DogBreedPersonality"];
+	$DogBreedCharacter = $_POST["DogBreedCharacter"];
 	$DogBreedCare = $_POST["DogBreedCare"];
+	$DogBreedHerdsman = $_POST["DogBreedHerdsman"];
+	$DogBreedHealthIssues = $_POST["DogBreedHealthIssues"];
+	$DogBreedNutrients = $_POST["DogBreedNutrients"];
 	$DogBreedID  = $_POST["DogBreedID"];
 
 	$sql = "UPDATE tbl_dog_breed SET 
 	DogBreedName='$DogBreedName',
-	DogBreedCare='$DogBreedCare'
+	DogBreedPersonality='$DogBreedPersonality',
+	DogBreedCharacter='$DogBreedCharacter',
+	DogBreedCare='$DogBreedCare',
+	DogBreedHerdsman='$DogBreedHerdsman',
+	DogBreedHealthIssues='$DogBreedHealthIssues',
+	DogBreedNutrients='$DogBreedNutrients'
 	WHERE DogBreedID=$DogBreedID
 	 ";
 

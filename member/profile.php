@@ -215,7 +215,7 @@
 						<br>
 						<p class="txt3">Go to Memeber Login Page</p>
 						<div class="container-login100-form-btn">
-							<a style="color: #fff;" class="login100-form-btn"  href="member_login.html">Click Here!</a>
+							<a style="color: #fff;" class="login100-form-btn"  href="member_login.php">Click Here!</a>
 						</div>
 					</div>
 				</form>

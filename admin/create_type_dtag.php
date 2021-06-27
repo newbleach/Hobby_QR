@@ -48,10 +48,41 @@ include('./include_menu.php');
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label>วิธีดูแล</label>
-                                    <textarea name="DogBreedCare" class="form-control" rows="3" placeholder="ป้อน . . ."></textarea>
+                                    <label>ข้อมูลทั่วไปและลักษณะนิสัย</label>
+                                    <textarea name="DogBreedPersonality" class="form-control" rows="1" placeholder="ป้อน . . ."></textarea>
                                 </div>
                             </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>บุคลิก</label>
+                                    <textarea name="DogBreedCharacter" class="form-control" rows="1" placeholder="ป้อน . . ."></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>วิธีดูแล</label>
+                                    <textarea name="DogBreedCare" class="form-control" rows="1" placeholder="ป้อน . . ."></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>ผู้เลี้ยงที่เหมาะกับสายพันธ์ุ</label>
+                                    <textarea name="DogBreedHerdsman" class="form-control" rows="1" placeholder="ป้อน . . ."></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>ภาวะปัญหาสุขภาพของสายพันธุ์</label>
+                                    <textarea name="DogBreedHealthIssues" class="form-control" rows="1" placeholder="ป้อน . . ."></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>ความต้องการด้านสารอาหารของสุนัข</label>
+                                    <textarea name="DogBreedNutrients" class="form-control" rows="1" placeholder="ป้อน . . ."></textarea>
+                                </div>
+                            </div>
+                       
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">

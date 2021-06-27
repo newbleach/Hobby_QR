@@ -3,7 +3,12 @@
 include('../condb.php'); 
 
 $DogBreedName = $_POST["DogBreedName"];
+$DogBreedPersonality = $_POST["DogBreedPersonality"];
+$DogBreedCharacter = $_POST["DogBreedCharacter"];
 $DogBreedCare = $_POST["DogBreedCare"];
+$DogBreedHerdsman = $_POST["DogBreedHerdsman"];
+$DogBreedHealthIssues = $_POST["DogBreedHealthIssues"];
+$DogBreedNutrients = $_POST["DogBreedNutrients"];
 
 	$check = "
 	SELECT  DogBreedName 
@@ -24,12 +29,22 @@ $DogBreedCare = $_POST["DogBreedCare"];
 	$sql = "INSERT INTO tbl_dog_breed
 	(
 	DogBreedName,
-	DogBreedCare
+	DogBreedPersonality,
+	DogBreedCharacter,
+	DogBreedCare,
+	DogBreedHerdsman,
+	DogBreedHealthIssues,
+	DogBreedNutrients
 	)
 	VALUES
 	(
 	'$DogBreedName',
-	'$DogBreedCare'
+	'$DogBreedPersonality',
+	'$DogBreedCharacter',
+	'$DogBreedCare',
+	'$DogBreedHerdsman',
+	'$DogBreedHealthIssues',
+	'$DogBreedNutrients'
 	)";
 
 	$result = mysqli_query($condb, $sql) or die ("Error in query: $sql " . mysqli_error());

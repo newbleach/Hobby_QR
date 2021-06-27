@@ -119,7 +119,7 @@
     </div>
   </nav>
   <!-- END nav -->
-  <div class="hero-wrap js-fullheight" style="background-image: url('./images/cover/imagecover.png');"
+  <div class="hero-wrap js-fullheight" style="background-image: url('./images/cover/coverpage.jpg');"
     data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
@@ -135,7 +135,7 @@
             <a href="member/index.php">MemberDashboard</a>/
             <a href="admin/index.php">AdminDashboard</a>
           </div>
-          <h1 class="mb-4">ใส่ใจชีวิต เพื่อความสุขที่มากขึ้น ด้วย</h1>
+          <h1 class="mb-4"> ใส่ใจชีวิต เพื่อความสุขที่มากขึ้น ด้วย</h1>
           <h1 class="mb-4">"HobbyQR" </h1>
           <p><a href="product.php" class="btn btn-primary mr-md-4 py-3 px-4">Product <span
                 class="ion-ios-arrow-forward"></span></a></p>
