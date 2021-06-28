@@ -119,7 +119,7 @@
     </div>
   </nav>
   <!-- END nav -->
-  <div class="hero-wrap js-fullheight" style="background-image: url('./images/cover/coverpage.jpg');"
+  <div class="hero-wrap js-fullheight" style="background-image: url('./images/cover/cover.jpg');"
     data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
