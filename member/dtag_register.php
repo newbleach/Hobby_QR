@@ -385,6 +385,8 @@ $result2 = mysqli_query($condb, $query2);
                                 <input type="hidden" name="TagType" value="Dtag">
                                 <input type="hidden" name="Ref_QrCodeID" value="3">
                                 <input type="hidden" name="Ref_OwnerID" value="3">
+                                <!-- <input type="hidden" name="Ref_OwnerID" value="  <?php echo $row['OwnerID'];?>"> -->
+                              
                                     <input type="submit" value="Send message" class="btn btn-primary py-3 px-4">
                                 </div>
                             </div>

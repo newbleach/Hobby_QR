@@ -10,6 +10,7 @@ include('../condb.php');
 	$Telephone = $_POST["Telephone"];
 	$Line = $_POST["Line"];
 	$Facebook = $_POST["Facebook"];
+	$TagType = $_POST["TagType"];
     // ===========================
 
 	$DogName = $_POST["DogName"];
@@ -60,7 +61,9 @@ include('../condb.php');
 	Email,
 	Telephone,
 	Line,
-	Facebook
+	Facebook,
+	TagType
+
 	)
 	VALUES
 	(
@@ -71,7 +74,8 @@ include('../condb.php');
 	'$Email',
 	'$Telephone',
 	'$Line',
-	'$Facebook'
+	'$Facebook',
+	'$TagType'
 	)";
     $result = mysqli_query($condb, $sql) or die ("Error in query: $sql " . mysqli_error());
 
