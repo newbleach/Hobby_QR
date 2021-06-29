@@ -1,3 +1,20 @@
+<?php
+  session_start();
+    if(isset($_SESSION['OwnerID'] )){
+          if ($_SESSION['TagType'] == 'Dtag') {
+                header("Location: dtag/index.php");
+            }
+          if ($_SESSION['TagType'] == 'Ctag') {
+                header("Location: ctag/index.php");
+            }
+          if ($_SESSION['TagType'] == 'Ttag') {
+                header("Location: ttag/index.php");
+            } else {
+          echo "<script>alert('User หรือ Password ไม่ถูกต้อง');</script>";
+        }
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,18 +101,18 @@ rel="stylesheet">
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form p-l-55 p-r-55 p-t-178">
+				<form action="member_login_db.php" method="post" class="login100-form validate-form p-l-55 p-r-55 p-t-178">
 					<span class="login100-form-title">
 						Member Login
 					</span>
 
 					<div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
-						<input class="input100" type="text" name="username" placeholder="Username">
+						<input class="input100" type="text" name="Username" placeholder="Username">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Please enter password">
-						<input class="input100" type="password" name="pass" placeholder="Password">
+						<input class="input100" type="password" name="Password" placeholder="Password">
 						<span class="focus-input100"></span>
 					</div>
 
@@ -110,11 +127,12 @@ rel="stylesheet">
 					</div>
 
 					<div class="container-login100-form-btn">
-						<a style="color: #fff;"class="login100-form-btn" href="./index.php">Login</a>
-
-						<!-- <button class="login100-form-btn">
+						<!-- <a style="color: #fff;"class="login100-form-btn" href="./admin/index.php">Login</a> -->
+						<button class="login100-form-btn" type="submit" name="submit">
 							Login
-						</button> -->
+						</button>
+						<!-- <input type="submit" class=btnsubmit name="submit" value="เข้าสู่ระบบ"> -->
+
 					</div>
 
 					<div class="flex-col-c p-t-50 p-b-40">
