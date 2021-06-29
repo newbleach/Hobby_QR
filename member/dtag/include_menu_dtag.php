@@ -25,7 +25,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
     <div class="container">
-      <a href="../../index3.html" class="navbar-brand">
+      <a href="../../index.php" class="navbar-brand">
         <img src="../../images/logo/icon-1_72.png" alt="HobbyQr Logo"
              style="opacity: .8">
       </a>

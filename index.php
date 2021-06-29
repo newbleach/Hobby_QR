@@ -132,7 +132,7 @@
             <a href="member/ttag_register.php">TTagRegister</a>/
             <a href="member/profile.php">Profile</a>/
             <a href="member/member_login.php">MemberLogin</a>/
-            <a href="member/index.php">MemberDashboard</a>/
+            <a href="member/dtag/index.php">MemberDashboard</a>/
             <a href="admin/index.php">AdminDashboard</a>
           </div>
           <h1 class="mb-4"> ใส่ใจชีวิต เพื่อความสุขที่มากขึ้น ด้วย</h1>

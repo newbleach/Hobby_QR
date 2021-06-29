@@ -382,6 +382,7 @@ $result2 = mysqli_query($condb, $query2);
                             </div> -->
                             <div class="col-md-12">
                                 <div class="form-group">
+                                <input type="hidden" name="TagType" value="Dtag">
                                 <input type="hidden" name="Ref_QrCodeID" value="3">
                                 <input type="hidden" name="Ref_OwnerID" value="3">
                                     <input type="submit" value="Send message" class="btn btn-primary py-3 px-4">

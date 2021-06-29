@@ -27,11 +27,11 @@ include('../condb.php');
 	$DogPhoto = (isset($_POST['DogPhoto']) ? $_POST['DogPhoto'] : '');
 	$upload=$_FILES['DogPhoto']['name'];
 	if($upload !='') { 
-		$path="./image/profile/";
+		$path="./profileimg/dtag/";
 		$type = strrchr($_FILES['DogPhoto']['name'],".");
 		$newname =$numrand.$date1.$type;
 		$path_copy=$path.$newname;
-		$path_link="./image/profile/".$newname;
+		$path_link="./profileimg/dtag/".$newname;
 		move_uploaded_file($_FILES['DogPhoto']['tmp_name'],$path_copy);  
 	}
 

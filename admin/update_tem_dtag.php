@@ -1,7 +1,22 @@
 <?php 
 include('./include_menu.php'); 
-?>
 
+$ID = $_GET['ID'];
+$sql = "
+SELECT * 
+FROM tbl_templates as t 
+INNER JOIN tbl_dog_breed as b ON t.Ref_DogBreedID=b.DogBreedID
+WHERE t.TemplateID=$ID";
+$result = mysqli_query($condb, $sql) or die ("Error in query: $sql " . mysqli_error());
+$row = mysqli_fetch_array($result);
+extract($row);
+
+$Ref_DogBreedID = $row['Ref_DogBreedID'];
+
+$query = "SELECT * FROM tbl_dog_breed 
+WHERE DogBreedID!=$Ref_DogBreedID" or die("Error:" . mysqli_error());
+$result2 = mysqli_query($condb, $query);
+?>
 <br><br>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -37,15 +52,18 @@ include('./include_menu.php');
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                <form role="form" action="create_tem_dtag_db.php" method="post" name="form1"  onsubmit="return checkForm();" class="form-horizontal" enctype="multipart/form-data">
+                <form role="form" action="update_tem_dtag_db.php" method="post" name="form1"  onsubmit="return checkForm();" class="form-horizontal" enctype="multipart/form-data">
                         <div class="row">
-                            <div class="col-sm-6">
+                        <div class="col-sm-2">
+                            <img src="./image/templates/<?php echo $row['TemplateFrontImage'];?>" width="200px">
+                        </div>
+                            <div class="col-sm-4">
                                 <!-- text input -->
                                 <div class="form-group">
                                     <label for="exampleInputFile">รูปภาพนามบัตรด้านหน้า</label>
                                     <div class="input-group">
                                         <div class="custom-file">
-                                            <input type="file" name="TemplateFrontImage" class="custom-file-input" required
+                                            <input type="file" name="TemplateFrontImage" class="custom-file-input"
                                                 id="exampleInputFile" eccept="image/*">
                                             <label class="custom-file-label" for="exampleInputFile">เลือกรูปภาพ</label>
                                         </div>
@@ -54,13 +72,17 @@ include('./include_menu.php');
                                         </div>
                                     </div>
                                 </div>
-                            </div> <div class="col-sm-6">
+                            </div> 
+                            <div class="col-sm-2">
+                            <img src="./image/templates/<?php echo $row['TemplateBackImage'];?>" width="200px">
+                        </div>
+                            <div class="col-sm-4">
                                 <!-- text input -->
                                 <div class="form-group">
                                     <label for="exampleInputFile">รูปภาพนามบัตรด้านหลัง</label>
                                     <div class="input-group">
                                         <div class="custom-file">
-                                            <input type="file" name="TemplateBackImage" class="custom-file-input" required
+                                            <input type="file" name="TemplateBackImage" class="custom-file-input"
                                                 id="exampleInputFile" eccept="image/*">
                                             <label class="custom-file-label" for="exampleInputFile">เลือกรูปภาพ</label>
                                         </div>
@@ -70,13 +92,16 @@ include('./include_menu.php');
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-2">
+                            <img src="./image/templates/<?php echo $row['TemplateFrontImageSample'];?>" width="200px">
+                        </div>
+                            <div class="col-sm-4">
                                 <!-- text input -->
                                 <div class="form-group">
                                     <label for="exampleInputFile">รูปภาพนามบัตรด้านหน้า(ตัวอย่าง)</label>
                                     <div class="input-group">
                                         <div class="custom-file">
-                                            <input type="file" name="TemplateFrontImageSample" class="custom-file-input" required
+                                            <input type="file" name="TemplateFrontImageSample" class="custom-file-input"
                                                 id="exampleInputFile" eccept="image/*">
                                             <label class="custom-file-label" for="exampleInputFile">เลือกรูปภาพ</label>
                                         </div>
@@ -86,13 +111,16 @@ include('./include_menu.php');
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-2">
+                            <img src="./image/templates/<?php echo $row['TemplateBackImageSample'];?>" width="200px">
+                        </div>
+                            <div class="col-sm-4">
                                 <!-- text input -->
                                 <div class="form-group">
                                     <label for="exampleInputFile">รูปภาพนามบัตรด้านหลัง(ตัวอย่าง)</label>
                                     <div class="input-group">
                                         <div class="custom-file">
-                                            <input type="file" name="TemplateBackImageSample" class="custom-file-input" required
+                                            <input type="file" name="TemplateBackImageSample" class="custom-file-input"
                                                 id="exampleInputFile" eccept="image/*">
                                             <label class="custom-file-label" for="exampleInputFile">เลือกรูปภาพ</label>
                                         </div>
@@ -102,20 +130,35 @@ include('./include_menu.php');
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 <div class="form-group">
                                     <label>ชื่อนามบัตร</label>
-                                    <input type="text" name="TemplateName" class="form-control" placeholder="ป้อน . . ." required>
+                                    <input type="text" name="TemplateName" class="form-control" value="<?php echo $row['TemplateName'];?>">
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>เขตคณะกรรมการ</label>
+                                    <select name="Ref_DogBreedID" class="form-control">
+                                        <option value="<?php echo $row['Ref_DogBreedID'];?>">-<?php echo $row['DogBreedName'];?>-
+                                        </option>
+                                        <option value="">--เลือกข้อมูล--</option>
+                                        <?php foreach($result2 as $results2){ ?>
+                                        <option value="<?php echo $results2["DogBreedID"];?>">
+                                            - <?php echo $results2["DogBreedName"];?>
+                                        </option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
                         <div class="form-group">
                                 <label>ราคานามบัตร</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">฿</span>
                                 </div>
-                                <input type="number" name="TemplatePrice" class="form-control"   placeholder="ป้อน . . .">
+                                <input type="number" name="TemplatePrice" class="form-control"   value="<?php echo $row['TemplatePrice'];?>">
                                 <div class="input-group-append">
                                     <span class="input-group-text">.00</span>
                                 </div>
@@ -127,6 +170,11 @@ include('./include_menu.php');
                 <!-- /.card-body -->
                 <div class="card-footer">
                     <div class="float-right">
+                        <input type="hidden" name="TemplateFrontImage2" value="<?php echo $row['TemplateFrontImage'];?>">
+                        <input type="hidden" name="TemplateBackImage2" value="<?php echo $row['TemplateBackImage'];?>">
+                        <input type="hidden" name="TemplateFrontImageSample2" value="<?php echo $row['TemplateFrontImageSample'];?>">
+                        <input type="hidden" name="TemplateBackImageSample2" value="<?php echo $row['TemplateBackImageSample'];?>">
+                        <input type="hidden" name="TemplateID" value="<?php echo $row['TemplateID'];?>">
                         <input type="hidden" name="TemplateCategory" value="DTag">
                         <button class="btn btn-info" type="submit" >บันทึก</button>
                         <button class="btn btn-default" type="reset">ยกเลิก</button>

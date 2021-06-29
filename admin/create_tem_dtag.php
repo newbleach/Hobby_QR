@@ -1,7 +1,9 @@
 <?php 
 include('./include_menu.php'); 
-?>
 
+$query = "SELECT * FROM tbl_dog_breed" or die("Error:" . mysqli_error());
+$result = mysqli_query($condb, $query);
+?>
 <br><br>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -102,13 +104,26 @@ include('./include_menu.php');
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 <div class="form-group">
                                     <label>ชื่อนามบัตร</label>
                                     <input type="text" name="TemplateName" class="form-control" placeholder="ป้อน . . ." required>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
+                            <div class="form-group">
+                            <label>ประเภทพันธุ์</label>
+                                    <select name="Ref_DogBreedID" class="form-control" required>
+                                        <option value="">--เลือกข้อมูล--</option>
+                                        <?php foreach($result as $results){ ?>
+                                        <option value="<?php echo $results["DogBreedID"];?>">
+                                            - <?php echo $results["DogBreedName"];?>
+                                        </option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
                         <div class="form-group">
                                 <label>ราคานามบัตร</label>
                             <div class="input-group">

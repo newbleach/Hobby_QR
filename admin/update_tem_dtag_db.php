@@ -5,12 +5,8 @@ include('../condb.php');
 	$TemplateName = $_POST["TemplateName"];
 	$TemplatePrice = $_POST["TemplatePrice"];
 	$TemplateCategory = $_POST["TemplateCategory"];
-	$TemplateFrontImage2 = $_POST["TemplateFrontImage2"];
-	$TemplateBackImage2 = $_POST["TemplateBackImage2"];
-	$TemplateFrontImageSample2 = $_POST["TemplateFrontImageSample2"];
-	$TemplateBackImageSample2 = $_POST["TemplateBackImageSample2"];
 	$Ref_DogBreedID = $_POST["Ref_DogBreedID"];
-
+	$TemplateID = $_POST["TemplateID"];
 
     $date = date("Ymd_His");
 	$numrand = (mt_rand());
@@ -35,7 +31,7 @@ include('../condb.php');
 		$path_copy2=$path2.$newname2;
 		$path_link2="./image/templates/".$newname2;
 		move_uploaded_file($_FILES['TemplateBackImage']['tmp_name'],$path_copy2);  
-	}
+}
 	$date3 = date("Ymd_His");
 	$numrand3 = (mt_rand());
 	$TemplateFrontImageSample = (isset($_POST['TemplateFrontImageSample']) ? $_POST['TemplateFrontImageSample'] : '');
@@ -59,45 +55,39 @@ include('../condb.php');
 		$path_copy4=$path4.$newname4;
 		$path_link4="./image/templates/".$newname4;
 		move_uploaded_file($_FILES['TemplateBackImageSample']['tmp_name'],$path_copy4);  
-	}
-	
-	$sql = "INSERT INTO tbl_templates
-	(
-	TemplateName,
-	TemplatePrice,
-	TemplateCategory,
-	TemplateFrontImage,
-	TemplateBackImage,
-	TemplateFrontImageSample,
-	TemplateBackImageSample,
-	Ref_DogBreedID
-	)
-	VALUES
-	(
-	'$TemplateName',
-	'$TemplatePrice',
-	'$TemplateCategory',
-	'$newname',
-	'$newname2',
-	'$newname3',
-	'$newname4',
-	'$Ref_DogBreedID'
-	)";
 
-	$result = mysqli_query($condb, $sql) or die ("Error in query: $sql " . mysqli_error());
-	
-	mysqli_close($condb);
-	
-	if($result){
-	echo "<script type='text/javascript'>";
-	echo "alert('เพิ่มข้อมูลสำเร็จ');";
-	echo "window.location = 'table_tem_dtag.php'; ";
-	echo "</script>";
-	}else{
-	echo "<script type='text/javascript'>";
-	echo "alert('Error!!');";
-	echo "window.location = 'table_tem_dtag.php'; ";
-	echo "</script>";
+}else{
+	$newname=$TemplateFrontImage2;
+	$newname2=$TemplateBackImage2;
+	$newname3=$TemplateFrontImageSample2;
+	$newname4=$TemplateBackImageSample2;
+}
+
+$sql = "UPDATE tbl_templates SET 
+TemplateName='$TemplateName',
+TemplatePrice='$TemplatePrice',
+TemplateCategory='$TemplateCategory',
+TemplateFrontImage='$newname',
+TemplateBackImage='$newname2',
+TemplateFrontImageSample='$newname3',
+TemplateBackImageSample='$newname4',
+Ref_DogBreedID='$Ref_DogBreedID'
+WHERE TemplateID=$TemplateID
+";
+
+
+$result = mysqli_query($condb, $sql) or die ("Error in query: $sql " . mysqli_error());
+
+mysqli_close($condb);
+
+if($result){
+echo "<script type='text/javascript'>";
+echo "alert('แก้ไขข้อมูลสำเร็จ');";
+echo "window.location = 'table_tem_dtag.php'; ";
+echo "</script>";
+}else{
+echo "<script type='text/javascript'>";
+echo "window.location = 'table_tem_dtag.php'; ";
+echo "</script>";
 }
 ?>
-
