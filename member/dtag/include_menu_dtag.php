@@ -7,7 +7,7 @@ $OwnerID = $_SESSION['OwnerID'];
 $TagType = $_SESSION['TagType'];
 
 if($TagType!='Dtag'){
-	Header("Location: ../logout.php");
+	Header("Location: ../../logout.php");
 }
 
 
@@ -144,7 +144,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                      <!-- Right navbar links -->
       <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
         <li class="nav-item">
-          <a class="nav-link"  href="#" role="button">
+          <a class="nav-link"  href="../../logout.php" role="button">
               <i class="fas fa-home"></i> ออกจากระบบ</a>
         </li>
       </ul>

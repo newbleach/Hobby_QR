@@ -263,7 +263,7 @@ $result2 = mysqli_query($condb, $query2);
                                 <div class="form-group">
                                     <div class="input-wrap">
                                         <div class="icon"><span class="fa fa-calendar"></span></div>
-                                        <input type="text" name="DogBirthdate" class="form-control appointment_date" placeholder="วันเกิด (ฺBirthdate)">
+                                        <input type="date" name="DogBirthdate" class="form-control appointment_date" placeholder="วันเกิด (ฺBirthdate)">
                                     </div>
                                 </div>
                             </div>
