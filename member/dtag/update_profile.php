@@ -1,11 +1,131 @@
-<?php 
-include('./include_menu.php'); 
-
+<?php
+    include './include_menu_dtag.php'
 ?>
-<br><br>
 <!-- Content Wrapper. Contains page content -->
-<!-- <div class="content-wrapper"> -->
+<div class="content-wrapper">
     <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">แก้ไขข้อมูลส่วนตัว</h1>
+          </div><!-- /.col -->
+          <!-- <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Layout</a></li>
+              <li class="breadcrumb-item active">Top Navigation</li>
+            </ol>
+          </div>/.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="content">
+      <div class="container">
+        
+        <div class="row">
+        <div class="col-lg-6">
+        <div class="card card-success">
+              <div class="card-header">
+                <h3 class="card-title">แก้ไขข้อมูลส่วนตัวเจ้าของ</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+                <div class="card-body">
+              <form class="form-horizontal">
+                  <div class="form-group row">
+                  <div class="col-sm-6">
+                      <div class="form-group">
+                                    <label>รหัสสมาชิก</label>
+                                    <div class="input-group">
+                                        <input type="text" name="OwnerID" class="form-control"
+                                            value="<?php echo 'OWN'.$row['OwnerID'];?>" disabled>
+                                    </div>
+                                </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                                    <label>ชื่อผู้ใช้</label>
+                                    <div class="input-group">
+                                        <input type="text" name="Username" class="form-control"
+                                            value="<?php echo $row['Username'];?>" disabled>
+                                    </div>
+                                </div>
+                    </div>
+                    <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>น้ำหนัก</label>
+                        <input type="text" class="form-control" placeholder="ป้อนข้อมูล ...">
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col-md-6 -->
+          <div class="col-lg-6">
+        <div class="card card-success">
+              <div class="card-header">
+                <h3 class="card-title">แก้ไขข้อมูลส่วนตัวสุนัข</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+                <div class="card-body">
+                  <div class="form-group row">
+                  <div class="col-sm-6">
+                      <!-- text input -->
+                      <div class="form-group">
+                                    <label>วันที่</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend" >
+                                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                        </div>
+                                        <!-- <input type="date" name="birthday" class="form-control" required> -->
+                                        <input type="date" name="birthday" class="form-control">
+                                        <!-- <input class="input-medium" type="text" data-provide="datepicker" data-date-language="th-th"> -->
+                                    </div>
+                                </div>
+                    </div>
+                    <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>น้ำหนัก</label>
+                        <input type="text" class="form-control" placeholder="ป้อนข้อมูล ...">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+        <!-- /.card-body -->
+        </div>
+        <!-- /.row -->
+        <div class="card-footer">
+                  <button type="submit" class="btn btn-success">Save</button>
+                  <button type="submit" class="btn btn-default">Cancel</button>
+                </div>
+                <!-- /.card-footer -->
+              </form>
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <?php
+    include './include_footer.php'
+?>
+
+<?php 
+include('./include_menu_dtag.php'); 
+?>
+<!-- Content Wrapper. Contains page content -->
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
@@ -56,7 +176,7 @@ include('./include_menu.php');
                 <div class="col-sm-10">
                             ________ ภาพปัจจุบัน ________
                             <br>
-                            <img src="../mimg/<?php echo $row['image_member'];?>" width="200px">
+                            <img src="../profileimg/dtag/<?php echo $DogPhoto;?>" width="200px">
                             <br>
                         </div><br>
                     <div class="row">
@@ -126,18 +246,9 @@ include('./include_menu.php');
             </div>
             <!-- /.card -->
         </div>
-        <br><br>
 </div>
 <!-- /.card -->
 </div><!-- /.container-fluid -->
-</section>
-<!-- /.content -->
-<!-- </div> -->
-<!-- /.content-wrapper -->
-<!-- <script>
-$(document).ready(function() {
-
-    $('a[href^="./table_member.php"]').addClass('nav-item has-treeview menu-open nav-link active ');
-
-});
-</script> -->
+<?php
+    include './include_footer.php'
+?>

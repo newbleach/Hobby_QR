@@ -87,22 +87,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         class="dropdown-item dropdown-toggle">ข้อมูลสุนัขตามพันธุ์</a>
                                     <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
                                         <li>
-                                            <a tabindex="-1" href="table_pay_money.php" class="dropdown-item">ข้อมูลทั่วไปและลักษณะนิสัย</a>
+                                            <a tabindex="-1" href="info_breed_personality.php" class="dropdown-item">ข้อมูลทั่วไปและลักษณะนิสัย</a>
                                         </li>
                                         <li>
-                                            <a tabindex="-1" href="table_get_money.php" class="dropdown-item">บุคลิก</a>
+                                            <a tabindex="-1" href="info_breed_charater.php" class="dropdown-item">บุคลิก</a>
                                         </li>
                                         <li>
-                                            <a tabindex="-1" href="table_get_money.php" class="dropdown-item">ข้อมูลการดูแล</a>
+                                            <a tabindex="-1" href="info_breed_care.php" class="dropdown-item">ข้อมูลการดูแล</a>
                                         </li>
                                         <li>
-                                            <a tabindex="-1" href="table_get_money.php" class="dropdown-item">ผู้เลี้ยงที่เหมาะ</a>
+                                            <a tabindex="-1" href="info_breed_herdsman.php" class="dropdown-item">ผู้เลี้ยงที่เหมาะ</a>
                                         </li>
                                         <li>
-                                            <a tabindex="-1" href="table_get_money.php" class="dropdown-item">ภาวะปัญหาสุขภาพ</a>
+                                            <a tabindex="-1" href="info_breed_healthissues.php" class="dropdown-item">ภาวะปัญหาสุขภาพ</a>
                                         </li>
                                         <li>
-                                            <a tabindex="-1" href="table_get_money.php" class="dropdown-item">ความต้องการด้านสารอาหาร</a>
+                                            <a tabindex="-1" href="info_breed_nutrients.php" class="dropdown-item">ความต้องการด้านสารอาหาร</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -123,19 +123,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </li>
                         <li class="nav-item dropdown">
           <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="fas fa-user-cog"></i> แก้ไขข้อมูลส่วนตัว
+          <i class="fas fa-user-cog"></i> แก้ไขข้อมูลส่วนตัว <i class="fas fa-sort-down"></i>
           </a>
           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
             <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
+            <a href="./index.php" class="dropdown-item">
             <i class="fas fa-user-circle"></i> ข้อมูลส่วนตัว
             </a>
             <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
+            <a href="update_profile.php" class="dropdown-item">
             <i class="fas fa-user-edit"></i> แก้ไขข้อมูลส่วนตัว
             </a>
             <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
+            <a href="change_password.php" class="dropdown-item">
             <i class="fas fa-key"></i> แก้ไขรหัสผ่าน
             </a>
         </li>
